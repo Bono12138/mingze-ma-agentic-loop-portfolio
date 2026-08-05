@@ -17,3 +17,12 @@ npm run serve
 ```
 
 The published site uses only project diagrams, authorised materials and screenshots from real tools or live pages. The World Cup Rank Room image links to the live site at <https://worldcup-rank-room.pages.dev/>.
+
+## Published deliverables
+
+- Website: <https://bono12138.github.io/mingze-ma-agentic-loop-portfolio/>
+- Trilingual PDF: <https://bono12138.github.io/mingze-ma-agentic-loop-portfolio/downloads/Mingze-Ma-Agentic-Loop-Portfolio.pdf>
+- Website QR code: `downloads/portfolio-qr.png`
+- Mobile portfolio cards: `share/Mingze-Ma-Portfolio-Card-zh-Hans.png`, `share/Mingze-Ma-Portfolio-Card-zh-Hant.png`, and `share/Mingze-Ma-Portfolio-Card-en.png`
+
+The World Cup card uses `assets/images/worldcup-rank-room-live-20260806.png`, captured from the live site. It is not a recreated mock-up.

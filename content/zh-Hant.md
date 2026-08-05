@@ -158,7 +158,11 @@ Bono Insight 已經整理出可安裝的 Skill、參考方法、驗證腳本、�
 
 我逐漸發現，流程很少是一次完整設計出來的。制度要求、系統限制、部門分工、過去發生的問題和個人經驗，都會在裏面留下痕跡。有些安排仍然必要，有些只是長期沒有重新檢查過。Agent 如果直接沿着這些流程加速執行，也會把其中原有的問題一併放大。
 
-Google DeepMind 聯合創辦人兼 CEO 德米斯·哈薩比斯（Demis Hassabis）曾這樣概括 DeepMind 創立時的使命：「Solve intelligence, and then use it to solve everything else.」——先解決智能，再用智能解決其他問題。[1]
+Google DeepMind 聯合創辦人兼 CEO 德米斯·哈薩比斯（Demis Hassabis）曾這樣概括 DeepMind 創立時的使命：
+
+> “Solve intelligence, and then use it to solve everything else.”
+
+即「先解決智能，再用智能解決其他問題」。[1]
 
 哈薩比斯討論的是智能能力本身：先把智能做出來，再把它用於科學和現實問題。我在工作中真正面對的，是這句話的後半段——一個組織如何才能「用智能解決問題」。Agent 已經能夠執行和推理，但組織裏的流程、業務知識、權限和判斷節點往往沒有被說清楚。流程在這裏就是智能進入組織的接口，它決定 Agent 能看到甚麼、可以做甚麼、甚麼時候停下來，以及誰對結果負責。我的工作是先把這些內容整理成 Agent 可以進入的管道，再讓它沿着流程執行和重現。實際運行留下的異常、失敗和反饋，又會回到任務、方法、工具或知識層，繼續修改這條管道。
 
@@ -172,3 +176,5 @@ Google DeepMind 聯合創辦人兼 CEO 德米斯·哈薩比斯（Demis Hassabis�
 - Quota Capsule：<https://github.com/Bono12138/codex-quota-capsule>
 - World Cup Rank Room：<https://github.com/Bono12138/worldcup-rank-room>
 - World Cup Rank Room 在線版本：<https://worldcup-rank-room.pages.dev/>
+- 手機速覽圖：[簡體中文](share/Mingze-Ma-Portfolio-Card-zh-Hans.png) · [繁體中文](share/Mingze-Ma-Portfolio-Card-zh-Hant.png) · [English](share/Mingze-Ma-Portfolio-Card-en.png)
+- 項目網站二維碼：[PNG](downloads/portfolio-qr.png)

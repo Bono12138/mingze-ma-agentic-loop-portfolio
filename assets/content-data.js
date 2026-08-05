@@ -17,8 +17,8 @@ window.PORTFOLIO_CONTENT = {
         "AI 工具落地与基础设施搭建经历"
       ],
       "mobile": [
-        "从 Copilot 到",
-        "Agentic Loop",
+        "Copilot 实践",
+        "Agentic Loop 实践",
         "AI 工具落地",
         "基础设施搭建经历"
       ]
@@ -107,12 +107,12 @@ window.PORTFOLIO_CONTENT = {
       {
         "id": "process-origins",
         "heading": "八、流程从哪里来",
-        "html": "<p>我之所以持续做这些工具和基础设施，是因为几段工作经历一直把我带回同一个问题：如果流程决定了我每天在做什么，那么又是什么在塑造流程？</p>\n<p>在安永参与审计和内控工作时，我习惯从结果向前追查：数据和证据来自哪里，控制是否真正运行，发现异常以后由谁判断和整改。现在负责 ECL 和操作风险、信息系统风险管理，一边要处理模型、数据与系统交付，一边也要持续梳理流程中的职责、交接和控制。对流程的关注不是后来使用 Agent 才出现的，它原本就是我工作的一部分。</p>\n<p>我逐渐发现，流程很少是一次完整设计出来的。制度要求、系统限制、部门分工、过去发生的问题和个人经验，都会在里面留下痕迹。有些安排仍然必要，有些只是长期没有重新检查过。Agent 如果直接沿着这些流程加速执行，也会把其中原有的问题一并放大。</p>\n<p>Google DeepMind 联合创始人兼 CEO 德米斯·哈萨比斯（Demis Hassabis）曾这样概括 DeepMind 创立时的使命：“Solve intelligence, and then use it to solve everything else.”——先解决智能，再用智能解决其他问题。[1]</p>\n<p>哈萨比斯讨论的是智能能力本身：先把智能做出来，再把它用于科学和现实问题。我在工作中真正面对的，是这句话的后半段——一个组织怎样才能“用智能解决问题”。Agent 已经能够执行和推理，但组织里的流程、业务知识、权限和判断节点往往没有被说清楚。流程在这里就是智能进入组织的接口，它决定 Agent 能看到什么、可以做什么、什么时候停下来，以及谁对结果负责。我的工作是先把这些内容整理成 Agent 可以进入的管道，再让它沿着流程执行和复现。实际运行留下的异常、失败和反馈，又会回到任务、方法、工具或知识层，继续修改这条管道。</p>\n<p>在实际建设中，我通常会先选取边界清楚、正在发生的业务问题，验证系统设计中的关键假设；同时保留整体架构、接口和后续扩展路径，再把经过项目和用户验证的能力沉淀为可复用的工具与方法。数据权限、职责分离、运行留痕、停止与回退、人工确认也会从架构设计阶段开始考虑。具体采用集中平台、分层能力还是其他建设方式，还需要结合组织的业务目标、现有系统、风险偏好和资源安排共同判断。</p>\n<p>[1] Demis Hassabis, “Demis Hassabis on AI, game theory, multimodality, and the nature of creativity,” <em>Possible</em>, 9 April 2025: <a class=\"url-link\" href=\"https://www.possible.fm/podcasts/demis/\" target=\"_blank\" rel=\"noreferrer\">https://www.possible.fm/podcasts/demis/</a></p>\n<hr>\n"
+        "html": "<p>我之所以持续做这些工具和基础设施，是因为几段工作经历一直把我带回同一个问题：如果流程决定了我每天在做什么，那么又是什么在塑造流程？</p>\n<p>在安永参与审计和内控工作时，我习惯从结果向前追查：数据和证据来自哪里，控制是否真正运行，发现异常以后由谁判断和整改。现在负责 ECL 和操作风险、信息系统风险管理，一边要处理模型、数据与系统交付，一边也要持续梳理流程中的职责、交接和控制。对流程的关注不是后来使用 Agent 才出现的，它原本就是我工作的一部分。</p>\n<p>我逐渐发现，流程很少是一次完整设计出来的。制度要求、系统限制、部门分工、过去发生的问题和个人经验，都会在里面留下痕迹。有些安排仍然必要，有些只是长期没有重新检查过。Agent 如果直接沿着这些流程加速执行，也会把其中原有的问题一并放大。</p>\n<p>Google DeepMind 联合创始人兼 CEO 德米斯·哈萨比斯（Demis Hassabis）曾这样概括 DeepMind 创立时的使命：</p>\n<blockquote>\n<p>“Solve intelligence, and then use it to solve everything else.”</p>\n</blockquote>\n<p>即“先解决智能，再用智能解决其他问题”。[1]</p>\n<p>哈萨比斯讨论的是智能能力本身：先把智能做出来，再把它用于科学和现实问题。我在工作中真正面对的，是这句话的后半段——一个组织怎样才能“用智能解决问题”。Agent 已经能够执行和推理，但组织里的流程、业务知识、权限和判断节点往往没有被说清楚。流程在这里就是智能进入组织的接口，它决定 Agent 能看到什么、可以做什么、什么时候停下来，以及谁对结果负责。我的工作是先把这些内容整理成 Agent 可以进入的管道，再让它沿着流程执行和复现。实际运行留下的异常、失败和反馈，又会回到任务、方法、工具或知识层，继续修改这条管道。</p>\n<p>在实际建设中，我通常会先选取边界清楚、正在发生的业务问题，验证系统设计中的关键假设；同时保留整体架构、接口和后续扩展路径，再把经过项目和用户验证的能力沉淀为可复用的工具与方法。数据权限、职责分离、运行留痕、停止与回退、人工确认也会从架构设计阶段开始考虑。具体采用集中平台、分层能力还是其他建设方式，还需要结合组织的业务目标、现有系统、风险偏好和资源安排共同判断。</p>\n<p>[1] Demis Hassabis, “Demis Hassabis on AI, game theory, multimodality, and the nature of creativity,” <em>Possible</em>, 9 April 2025: <a class=\"url-link\" href=\"https://www.possible.fm/podcasts/demis/\" target=\"_blank\" rel=\"noreferrer\">https://www.possible.fm/podcasts/demis/</a></p>\n<hr>\n"
       },
       {
         "id": "public-links",
         "heading": "公开链接",
-        "html": "<ul>\n<li>BonoBox：<a class=\"url-link\" href=\"https://github.com/Bono12138/bonobox\" target=\"_blank\" rel=\"noreferrer\">https://github.com/Bono12138/bonobox</a></li>\n<li>Quota Capsule：<a class=\"url-link\" href=\"https://github.com/Bono12138/codex-quota-capsule\" target=\"_blank\" rel=\"noreferrer\">https://github.com/Bono12138/codex-quota-capsule</a></li>\n<li>World Cup Rank Room：<a class=\"url-link\" href=\"https://github.com/Bono12138/worldcup-rank-room\" target=\"_blank\" rel=\"noreferrer\">https://github.com/Bono12138/worldcup-rank-room</a></li>\n<li>World Cup Rank Room 在线版本：<a class=\"url-link\" href=\"https://worldcup-rank-room.pages.dev/\" target=\"_blank\" rel=\"noreferrer\">https://worldcup-rank-room.pages.dev/</a></li>\n</ul>\n"
+        "html": "<ul>\n<li>BonoBox：<a class=\"url-link\" href=\"https://github.com/Bono12138/bonobox\" target=\"_blank\" rel=\"noreferrer\">https://github.com/Bono12138/bonobox</a></li>\n<li>Quota Capsule：<a class=\"url-link\" href=\"https://github.com/Bono12138/codex-quota-capsule\" target=\"_blank\" rel=\"noreferrer\">https://github.com/Bono12138/codex-quota-capsule</a></li>\n<li>World Cup Rank Room：<a class=\"url-link\" href=\"https://github.com/Bono12138/worldcup-rank-room\" target=\"_blank\" rel=\"noreferrer\">https://github.com/Bono12138/worldcup-rank-room</a></li>\n<li>World Cup Rank Room 在线版本：<a class=\"url-link\" href=\"https://worldcup-rank-room.pages.dev/\" target=\"_blank\" rel=\"noreferrer\">https://worldcup-rank-room.pages.dev/</a></li>\n<li>手机速览图：<a href=\"share/Mingze-Ma-Portfolio-Card-zh-Hans.png\">简体中文</a> · <a href=\"share/Mingze-Ma-Portfolio-Card-zh-Hant.png\">繁體中文</a> · <a href=\"share/Mingze-Ma-Portfolio-Card-en.png\">English</a></li>\n<li>项目网站二维码：<a href=\"downloads/portfolio-qr.png\">PNG</a></li>\n</ul>\n"
       }
     ]
   },
@@ -134,8 +134,8 @@ window.PORTFOLIO_CONTENT = {
         "AI 工具落地與基礎設施搭建經歷"
       ],
       "mobile": [
-        "從 Copilot 到",
-        "Agentic Loop",
+        "Copilot 實踐",
+        "Agentic Loop 實踐",
         "AI 工具落地",
         "基礎設施搭建經歷"
       ]
@@ -224,12 +224,12 @@ window.PORTFOLIO_CONTENT = {
       {
         "id": "process-origins",
         "heading": "八、流程從哪裏來",
-        "html": "<p>我之所以持續做這些工具和基礎設施，是因為幾段工作經歷一直把我帶回同一個問題：如果流程決定了我每天在做甚麼，那麼又是甚麼在塑造流程？</p>\n<p>在安永參與審計和內控工作時，我習慣從結果向前追查：數據和證據來自哪裏，控制是否真正運行，發現異常後由誰判斷和整改。現在負責 ECL 和操作風險、信息系統風險管理，一邊要處理模型、數據與系統交付，一邊也要持續梳理流程中的職責、交接和控制。對流程的關注不是後來使用 Agent 才出現的，它原本就是我工作的一部分。</p>\n<p>我逐漸發現，流程很少是一次完整設計出來的。制度要求、系統限制、部門分工、過去發生的問題和個人經驗，都會在裏面留下痕跡。有些安排仍然必要，有些只是長期沒有重新檢查過。Agent 如果直接沿着這些流程加速執行，也會把其中原有的問題一併放大。</p>\n<p>Google DeepMind 聯合創辦人兼 CEO 德米斯·哈薩比斯（Demis Hassabis）曾這樣概括 DeepMind 創立時的使命：「Solve intelligence, and then use it to solve everything else.」——先解決智能，再用智能解決其他問題。[1]</p>\n<p>哈薩比斯討論的是智能能力本身：先把智能做出來，再把它用於科學和現實問題。我在工作中真正面對的，是這句話的後半段——一個組織如何才能「用智能解決問題」。Agent 已經能夠執行和推理，但組織裏的流程、業務知識、權限和判斷節點往往沒有被說清楚。流程在這裏就是智能進入組織的接口，它決定 Agent 能看到甚麼、可以做甚麼、甚麼時候停下來，以及誰對結果負責。我的工作是先把這些內容整理成 Agent 可以進入的管道，再讓它沿着流程執行和重現。實際運行留下的異常、失敗和反饋，又會回到任務、方法、工具或知識層，繼續修改這條管道。</p>\n<p>在實際建設中，我通常會先選取邊界清楚、正在發生的業務問題，驗證系統設計中的關鍵假設；同時保留整體架構、接口和後續擴展路徑，再把經過項目和用戶驗證的能力沉澱為可重用的工具與方法。數據權限、職責分離、運行留痕、停止與回退、人工確認也會從架構設計階段開始考慮。具體採用集中平台、分層能力還是其他建設方式，還需要結合組織的業務目標、現有系統、風險偏好和資源安排共同判斷。</p>\n<p>[1] Demis Hassabis, “Demis Hassabis on AI, game theory, multimodality, and the nature of creativity,” <em>Possible</em>, 9 April 2025: <a class=\"url-link\" href=\"https://www.possible.fm/podcasts/demis/\" target=\"_blank\" rel=\"noreferrer\">https://www.possible.fm/podcasts/demis/</a></p>\n"
+        "html": "<p>我之所以持續做這些工具和基礎設施，是因為幾段工作經歷一直把我帶回同一個問題：如果流程決定了我每天在做甚麼，那麼又是甚麼在塑造流程？</p>\n<p>在安永參與審計和內控工作時，我習慣從結果向前追查：數據和證據來自哪裏，控制是否真正運行，發現異常後由誰判斷和整改。現在負責 ECL 和操作風險、信息系統風險管理，一邊要處理模型、數據與系統交付，一邊也要持續梳理流程中的職責、交接和控制。對流程的關注不是後來使用 Agent 才出現的，它原本就是我工作的一部分。</p>\n<p>我逐漸發現，流程很少是一次完整設計出來的。制度要求、系統限制、部門分工、過去發生的問題和個人經驗，都會在裏面留下痕跡。有些安排仍然必要，有些只是長期沒有重新檢查過。Agent 如果直接沿着這些流程加速執行，也會把其中原有的問題一併放大。</p>\n<p>Google DeepMind 聯合創辦人兼 CEO 德米斯·哈薩比斯（Demis Hassabis）曾這樣概括 DeepMind 創立時的使命：</p>\n<blockquote>\n<p>“Solve intelligence, and then use it to solve everything else.”</p>\n</blockquote>\n<p>即「先解決智能，再用智能解決其他問題」。[1]</p>\n<p>哈薩比斯討論的是智能能力本身：先把智能做出來，再把它用於科學和現實問題。我在工作中真正面對的，是這句話的後半段——一個組織如何才能「用智能解決問題」。Agent 已經能夠執行和推理，但組織裏的流程、業務知識、權限和判斷節點往往沒有被說清楚。流程在這裏就是智能進入組織的接口，它決定 Agent 能看到甚麼、可以做甚麼、甚麼時候停下來，以及誰對結果負責。我的工作是先把這些內容整理成 Agent 可以進入的管道，再讓它沿着流程執行和重現。實際運行留下的異常、失敗和反饋，又會回到任務、方法、工具或知識層，繼續修改這條管道。</p>\n<p>在實際建設中，我通常會先選取邊界清楚、正在發生的業務問題，驗證系統設計中的關鍵假設；同時保留整體架構、接口和後續擴展路徑，再把經過項目和用戶驗證的能力沉澱為可重用的工具與方法。數據權限、職責分離、運行留痕、停止與回退、人工確認也會從架構設計階段開始考慮。具體採用集中平台、分層能力還是其他建設方式，還需要結合組織的業務目標、現有系統、風險偏好和資源安排共同判斷。</p>\n<p>[1] Demis Hassabis, “Demis Hassabis on AI, game theory, multimodality, and the nature of creativity,” <em>Possible</em>, 9 April 2025: <a class=\"url-link\" href=\"https://www.possible.fm/podcasts/demis/\" target=\"_blank\" rel=\"noreferrer\">https://www.possible.fm/podcasts/demis/</a></p>\n"
       },
       {
         "id": "public-links",
         "heading": "公開連結",
-        "html": "<ul>\n<li>BonoBox：<a class=\"url-link\" href=\"https://github.com/Bono12138/bonobox\" target=\"_blank\" rel=\"noreferrer\">https://github.com/Bono12138/bonobox</a></li>\n<li>Quota Capsule：<a class=\"url-link\" href=\"https://github.com/Bono12138/codex-quota-capsule\" target=\"_blank\" rel=\"noreferrer\">https://github.com/Bono12138/codex-quota-capsule</a></li>\n<li>World Cup Rank Room：<a class=\"url-link\" href=\"https://github.com/Bono12138/worldcup-rank-room\" target=\"_blank\" rel=\"noreferrer\">https://github.com/Bono12138/worldcup-rank-room</a></li>\n<li>World Cup Rank Room 在線版本：<a class=\"url-link\" href=\"https://worldcup-rank-room.pages.dev/\" target=\"_blank\" rel=\"noreferrer\">https://worldcup-rank-room.pages.dev/</a></li>\n</ul>\n"
+        "html": "<ul>\n<li>BonoBox：<a class=\"url-link\" href=\"https://github.com/Bono12138/bonobox\" target=\"_blank\" rel=\"noreferrer\">https://github.com/Bono12138/bonobox</a></li>\n<li>Quota Capsule：<a class=\"url-link\" href=\"https://github.com/Bono12138/codex-quota-capsule\" target=\"_blank\" rel=\"noreferrer\">https://github.com/Bono12138/codex-quota-capsule</a></li>\n<li>World Cup Rank Room：<a class=\"url-link\" href=\"https://github.com/Bono12138/worldcup-rank-room\" target=\"_blank\" rel=\"noreferrer\">https://github.com/Bono12138/worldcup-rank-room</a></li>\n<li>World Cup Rank Room 在線版本：<a class=\"url-link\" href=\"https://worldcup-rank-room.pages.dev/\" target=\"_blank\" rel=\"noreferrer\">https://worldcup-rank-room.pages.dev/</a></li>\n<li>手機速覽圖：<a href=\"share/Mingze-Ma-Portfolio-Card-zh-Hans.png\">簡體中文</a> · <a href=\"share/Mingze-Ma-Portfolio-Card-zh-Hant.png\">繁體中文</a> · <a href=\"share/Mingze-Ma-Portfolio-Card-en.png\">English</a></li>\n<li>項目網站二維碼：<a href=\"downloads/portfolio-qr.png\">PNG</a></li>\n</ul>\n"
       }
     ]
   },
@@ -252,9 +252,9 @@ window.PORTFOLIO_CONTENT = {
         "Building the Supporting Infrastructure"
       ],
       "mobile": [
-        "From Copilot to",
-        "the Agentic Loop",
-        "Delivering AI Tools",
+        "Copilot",
+        "Agentic Loop",
+        "AI Tool Delivery",
         "Supporting Infrastructure"
       ]
     },
@@ -347,7 +347,7 @@ window.PORTFOLIO_CONTENT = {
       {
         "id": "public-links",
         "heading": "Public links",
-        "html": "<ul>\n<li>BonoBox: <a class=\"url-link\" href=\"https://github.com/Bono12138/bonobox\" target=\"_blank\" rel=\"noreferrer\">https://github.com/Bono12138/bonobox</a></li>\n<li>Quota Capsule: <a class=\"url-link\" href=\"https://github.com/Bono12138/codex-quota-capsule\" target=\"_blank\" rel=\"noreferrer\">https://github.com/Bono12138/codex-quota-capsule</a></li>\n<li>World Cup Rank Room: <a class=\"url-link\" href=\"https://github.com/Bono12138/worldcup-rank-room\" target=\"_blank\" rel=\"noreferrer\">https://github.com/Bono12138/worldcup-rank-room</a></li>\n<li>World Cup Rank Room live site: <a class=\"url-link\" href=\"https://worldcup-rank-room.pages.dev/\" target=\"_blank\" rel=\"noreferrer\">https://worldcup-rank-room.pages.dev/</a></li>\n</ul>\n"
+        "html": "<ul>\n<li>BonoBox: <a class=\"url-link\" href=\"https://github.com/Bono12138/bonobox\" target=\"_blank\" rel=\"noreferrer\">https://github.com/Bono12138/bonobox</a></li>\n<li>Quota Capsule: <a class=\"url-link\" href=\"https://github.com/Bono12138/codex-quota-capsule\" target=\"_blank\" rel=\"noreferrer\">https://github.com/Bono12138/codex-quota-capsule</a></li>\n<li>World Cup Rank Room: <a class=\"url-link\" href=\"https://github.com/Bono12138/worldcup-rank-room\" target=\"_blank\" rel=\"noreferrer\">https://github.com/Bono12138/worldcup-rank-room</a></li>\n<li>World Cup Rank Room live site: <a class=\"url-link\" href=\"https://worldcup-rank-room.pages.dev/\" target=\"_blank\" rel=\"noreferrer\">https://worldcup-rank-room.pages.dev/</a></li>\n<li>Mobile portfolio cards: <a href=\"share/Mingze-Ma-Portfolio-Card-zh-Hans.png\">Simplified Chinese</a> · <a href=\"share/Mingze-Ma-Portfolio-Card-zh-Hant.png\">Traditional Chinese</a> · <a href=\"share/Mingze-Ma-Portfolio-Card-en.png\">English</a></li>\n<li>Portfolio website QR code: <a href=\"downloads/portfolio-qr.png\">PNG</a></li>\n</ul>\n"
       }
     ]
   }

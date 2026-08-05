@@ -11,7 +11,7 @@ const locales = {
     mobileSummary: ["金融风险、系统、数据与流程", "安永的 IT 控制与系统审阅", "Akulaku Group 的 ECL", "操作风险管理与 Agent 工具落地"],
     titleLines: {
       desktop: ["从 Copilot 到 Agentic Loop", "AI 工具落地与基础设施搭建经历"],
-      mobile: ["从 Copilot 到", "Agentic Loop", "AI 工具落地", "基础设施搭建经历"]
+      mobile: ["Copilot 实践", "Agentic Loop 实践", "AI 工具落地", "基础设施搭建经历"]
     },
     navLabels: ["工作背景", "0630 ECL 更新", "审计回应架构", "Superset 查询工具", "从工具到分层设计", "四层能力与知识底座", "Bono Insight 插件", "分享与快速落地案例", "流程的来源", "公开链接"],
     roles: ["ECL 与操作风险", "ITGC、ITAC 与系统控制", "Agentic Engineering"],
@@ -46,7 +46,7 @@ const locales = {
     mobileSummary: ["金融風險、系統、數據與流程", "安永的 IT 控制與系統審閱", "Akulaku Group 的 ECL", "操作風險管理與 Agent 工具落地"],
     titleLines: {
       desktop: ["從 Copilot 到 Agentic Loop", "AI 工具落地與基礎設施搭建經歷"],
-      mobile: ["從 Copilot 到", "Agentic Loop", "AI 工具落地", "基礎設施搭建經歷"]
+      mobile: ["Copilot 實踐", "Agentic Loop 實踐", "AI 工具落地", "基礎設施搭建經歷"]
     },
     navLabels: ["工作背景", "0630 ECL 更新", "審計回應架構", "Superset 查詢工具", "從工具到分層設計", "四層能力與知識底座", "Bono Insight 插件", "分享與快速落地案例", "流程的來源", "公開連結"],
     roles: ["ECL 與操作風險", "ITGC、ITAC 與系統控制", "Agentic Engineering"],
@@ -81,7 +81,7 @@ const locales = {
     mobileSummary: ["Financial risk, systems, data and process", "IT controls and systems review at EY", "ECL and operational risk at Akulaku Group", "Agent tooling in live workflows"],
     titleLines: {
       desktop: ["From Copilot to the Agentic Loop", "Delivering AI Tools", "Building the Supporting Infrastructure"],
-      mobile: ["From Copilot to", "the Agentic Loop", "Delivering AI Tools", "Supporting Infrastructure"]
+      mobile: ["Copilot", "Agentic Loop", "AI Tool Delivery", "Supporting Infrastructure"]
     },
     navLabels: ["Professional background", "The 0630 ECL update", "Audit-response architecture", "Superset query tool", "From tool to architecture", "Four-layer foundation", "Bono Insight plugin", "Sharing and rapid delivery", "Where processes come from", "Public links"],
     roles: ["ECL and operational risk", "ITGC, ITAC and systems control", "Agentic engineering"],

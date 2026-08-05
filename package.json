@@ -5,9 +5,11 @@
   "description": "Mingze Ma's trilingual project portfolio on AI tool delivery and Agentic Loop infrastructure.",
   "scripts": {
     "build": "node scripts/build-content.mjs",
+    "build:qr": "node scripts/generate-qr.mjs",
     "serve": "python3 -m http.server 4174"
   },
   "devDependencies": {
-    "marked": "^16.2.1"
+    "marked": "^16.2.1",
+    "qrcode": "^1.5.4"
   }
 }

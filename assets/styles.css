@@ -542,6 +542,18 @@ h1 {
   text-wrap: pretty;
 }
 
+.article blockquote {
+  margin: 0 0 22px;
+  padding: 15px 18px;
+  color: var(--ink-soft);
+  background: var(--paper-soft);
+  border-left: 3px solid var(--green);
+}
+
+.article blockquote p {
+  margin: 0;
+}
+
 .semantic-unit {
   white-space: nowrap;
 }

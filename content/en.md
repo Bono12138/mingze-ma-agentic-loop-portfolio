@@ -180,3 +180,5 @@ In practice, I select current business problems with clear boundaries to test th
 - Quota Capsule: <https://github.com/Bono12138/codex-quota-capsule>
 - World Cup Rank Room: <https://github.com/Bono12138/worldcup-rank-room>
 - World Cup Rank Room live site: <https://worldcup-rank-room.pages.dev/>
+- Mobile portfolio cards: [Simplified Chinese](share/Mingze-Ma-Portfolio-Card-zh-Hans.png) · [Traditional Chinese](share/Mingze-Ma-Portfolio-Card-zh-Hant.png) · [English](share/Mingze-Ma-Portfolio-Card-en.png)
+- Portfolio website QR code: [PNG](downloads/portfolio-qr.png)
