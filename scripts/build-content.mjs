@@ -81,7 +81,7 @@ const locales = {
     mobileSummary: ["Financial risk, systems, data and process", "IT controls and systems review at EY", "ECL and operational risk at Akulaku Group", "Agent tooling in live workflows"],
     titleLines: {
       desktop: ["From Copilot to the Agentic Loop", "Delivering AI Tools", "Building the Supporting Infrastructure"],
-      mobile: ["Copilot", "Agentic Loop", "AI Tool Delivery", "Supporting Infrastructure"]
+      mobile: ["Copilot", "Agentic Loop", "AI Tool Delivery", "AI Infrastructure"]
     },
     navLabels: ["Professional background", "The 0630 ECL update", "Audit-response architecture", "Superset query tool", "From tool to architecture", "Four-layer foundation", "Bono Insight plugin", "Sharing and rapid delivery", "Where processes come from", "Public links"],
     roles: ["ECL and operational risk", "ITGC, ITAC and systems control", "Agentic engineering"],

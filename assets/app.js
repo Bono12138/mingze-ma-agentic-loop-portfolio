@@ -59,6 +59,30 @@
     }
   ];
 
+  const imageDimensions = {
+    "assets/images/audit-sc.png": [1920, 809],
+    "assets/images/audit-tc.png": [1920, 809],
+    "assets/images/audit-en.png": [1920, 879],
+    "assets/images/feedback-sc.png": [1770, 467],
+    "assets/images/feedback-tc.png": [1770, 467],
+    "assets/images/feedback-en.png": [1770, 467],
+    "assets/images/layers-sc.png": [1920, 1022],
+    "assets/images/layers-tc.png": [1920, 1022],
+    "assets/images/layers-en.png": [1920, 1100],
+    "assets/images/loop-sc.png": [1920, 723],
+    "assets/images/loop-tc.png": [1920, 723],
+    "assets/images/loop-en.png": [1920, 765],
+    "assets/images/wiki-superset-query.png": [1885, 730],
+    "assets/images/wiki-query-governance.png": [1894, 732],
+    "assets/images/internal-feedback-superset-01.jpg": [1172, 2654],
+    "assets/images/internal-feedback-superset-02.jpg": [1172, 2649],
+    "assets/images/bono-insight-plugin.png": [800, 905],
+    "assets/images/vanke-finance-ai-sharing-redacted.png": [2996, 1676],
+    "assets/images/bonobox-visual.png": [613, 992],
+    "assets/images/quota-capsule.png": [872, 1120],
+    "assets/images/worldcup-rank-room-live-20260806.png": [2880, 1800]
+  };
+
   const protectedPhrases = [
     "Akulaku Group", "Agentic Loop", "Agentic Engineering", "Bono Agent", "Bono Insight",
     "World Cup Rank Room", "Claude Code", "Cursor CLI", "Financial Services Technology Risk",
@@ -135,6 +159,11 @@
     dom.lightboxClose.setAttribute("aria-label", locale.labels.closeImage);
   }
 
+  function imageSizeAttributes(src) {
+    const dimensions = imageDimensions[src];
+    return dimensions ? ` width="${dimensions[0]}" height="${dimensions[1]}"` : "";
+  }
+
   function mediaFigure(item, language) {
     const suffix = languageAssetSuffix(language);
     const src = item.src || `assets/images/${item.asset}-${suffix}.png`;
@@ -143,7 +172,7 @@
     figure.className = `section-media media-frame${item.portrait ? " portrait-media" : ""}`;
     figure.innerHTML = `
       <button type="button" class="media-button" data-lightbox-src="${src}" data-lightbox-caption="${escapeHtml(caption)}">
-        <img src="${src}" alt="${escapeHtml(caption)}" loading="lazy">
+        <img src="${src}" alt="${escapeHtml(caption)}"${imageSizeAttributes(src)} loading="lazy">
         <span class="media-hint">${escapeHtml(content[language].labels.openImage)}</span>
       </button>
       <figcaption>${escapeHtml(caption)}</figcaption>`;
@@ -166,7 +195,7 @@
     sharing.className = "section-media media-frame project-card-wide";
     sharing.innerHTML = `
       <button type="button" class="media-button" data-lightbox-src="assets/images/vanke-finance-ai-sharing-redacted.png" data-lightbox-caption="${sharingCaption}">
-        <img src="assets/images/vanke-finance-ai-sharing-redacted.png" alt="${sharingCaption}" loading="lazy">
+        <img src="assets/images/vanke-finance-ai-sharing-redacted.png" alt="${sharingCaption}"${imageSizeAttributes("assets/images/vanke-finance-ai-sharing-redacted.png")} loading="lazy">
         <span class="media-hint">${content[language].labels.openImage}</span>
       </button>
       <figcaption>${sharingCaption}</figcaption>`;
@@ -180,7 +209,7 @@
       link.rel = "noreferrer";
       link.innerHTML = `
         <span class="project-card-media${project.contain ? " contain" : ""}">
-          <img src="${project.src}" alt="${project.title}" loading="lazy">
+          <img src="${project.src}" alt="${project.title}"${imageSizeAttributes(project.src)} loading="lazy">
         </span>
         <span class="project-card-copy">
           <small>${project.label[language]}</small>
@@ -210,9 +239,9 @@
 
   function render(language, preserveScroll) {
     const locale = content[language];
-    const targetId = preserveScroll ? currentVisibleSection() : activeSection;
+    const targetId = activeSection;
     activeSection = targetId;
-    if (preserveScroll) navigationLockUntil = Date.now() + 1000;
+    if (preserveScroll) navigationLockUntil = Date.now() + 1500;
     activeLanguage = language;
     dom.html.lang = locale.htmlLang;
     document.title = `${locale.title}｜${language === "en" ? "Mingze Ma" : "马铭泽"}`;
@@ -270,19 +299,15 @@
     setActiveSection(targetId);
     updateUrl(language, targetId, false);
     if (preserveScroll) {
-      requestAnimationFrame(() => document.getElementById(targetId)?.scrollIntoView({ block: "start" }));
+      const restoreSection = () => {
+        document.getElementById(targetId)?.scrollIntoView({ block: "start", behavior: "instant" });
+        setActiveSection(targetId);
+        updateUrl(language, targetId, false);
+      };
+      restoreSection();
+      setTimeout(restoreSection, 300);
+      setTimeout(restoreSection, 900);
     }
-  }
-
-  function currentVisibleSection() {
-    const sections = [...document.querySelectorAll(".article-section")];
-    if (!sections.length) return activeSection;
-    const headerHeight = Number.parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--header-height")) || 72;
-    const targetLine = headerHeight + 135;
-    return sections.reduce((closest, section) => {
-      const distance = Math.abs(section.getBoundingClientRect().top - targetLine);
-      return distance < closest.distance ? { id: section.id, distance } : closest;
-    }, { id: sections[0].id, distance: Number.POSITIVE_INFINITY }).id;
   }
 
   function placeSectionAssets(sectionId, body, language) {
@@ -407,15 +432,23 @@
     });
   }
 
+  function sectionAtViewport() {
+    const threshold = Number.parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--header-height")) + 140;
+    const sections = [...document.querySelectorAll(".article-section")];
+    let current = sections[0]?.id || "background";
+    for (const section of sections) {
+      if (section.getBoundingClientRect().top <= threshold) current = section.id;
+      else break;
+    }
+    return current;
+  }
+
   function observeSections() {
     sectionObserver?.disconnect();
     sectionObserver = new IntersectionObserver((entries) => {
-      const visible = entries
-        .filter((entry) => entry.isIntersecting)
-        .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
-      if (!visible.length) return;
+      if (!entries.some((entry) => entry.isIntersecting)) return;
       if (Date.now() < navigationLockUntil) return;
-      const sectionId = visible[0].target.id;
+      const sectionId = sectionAtViewport();
       if (sectionId !== activeSection) {
         setActiveSection(sectionId);
         updateUrl(activeLanguage, sectionId, false);
@@ -474,13 +507,7 @@
     dom.progress.style.width = `${available > 0 ? (root.scrollTop / available) * 100 : 0}%`;
     dom.topButton.classList.toggle("is-visible", root.scrollTop > 700);
     if (Date.now() >= navigationLockUntil) {
-      const threshold = Number.parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--header-height")) + 140;
-      const sections = [...document.querySelectorAll(".article-section")];
-      let current = sections[0]?.id || "background";
-      for (const section of sections) {
-        if (section.getBoundingClientRect().top <= threshold) current = section.id;
-        else break;
-      }
+      const current = sectionAtViewport();
       if (current !== activeSection) {
         setActiveSection(current);
         updateUrl(activeLanguage, current, false);
@@ -490,7 +517,11 @@
 
   document.querySelectorAll(".language-switcher button").forEach((button) => {
     button.addEventListener("click", () => {
-      if (button.dataset.lang !== activeLanguage) render(button.dataset.lang, true);
+      if (button.dataset.lang !== activeLanguage) {
+        const sectionFromUrl = location.hash.slice(1);
+        setActiveSection(sectionFromUrl ? normaliseSection(sectionFromUrl) : sectionAtViewport());
+        render(button.dataset.lang, true);
+      }
     });
   });
   dom.menuButton.addEventListener("click", openDrawer);

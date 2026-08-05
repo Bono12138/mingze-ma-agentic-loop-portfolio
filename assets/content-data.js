@@ -255,7 +255,7 @@ window.PORTFOLIO_CONTENT = {
         "Copilot",
         "Agentic Loop",
         "AI Tool Delivery",
-        "Supporting Infrastructure"
+        "AI Infrastructure"
       ]
     },
     "navLabels": [
