@@ -2,6 +2,7 @@
   "use strict";
 
   const content = window.PORTFOLIO_CONTENT;
+  const analytics = window.PortfolioAnalytics || { track() {} };
   const supportedLanguages = ["zh-Hans", "zh-Hant", "en"];
   const sectionAssets = {
     "audit-response": [
@@ -122,6 +123,14 @@
   let activeSection = normaliseSection(location.hash.slice(1));
   let sectionObserver;
   let navigationLockUntil = 0;
+  let sectionEngagementTimer;
+  let summarySent = false;
+  let maxScrollDepthPercent = 0;
+  let sectionEngagementsTotal = 0;
+  let activeTimeMs = 0;
+  let activeClockStartedAt = document.visibilityState === "visible" ? performance.now() : null;
+  const sectionEngagementCounts = new Map();
+  const engagedSections = new Set();
 
   function getInitialLanguage() {
     const fromUrl = new URLSearchParams(location.search).get("lang");
@@ -424,12 +433,36 @@
   }
 
   function setActiveSection(sectionId) {
-    activeSection = normaliseSection(sectionId);
+    const nextSection = normaliseSection(sectionId);
+    const sectionChanged = nextSection !== activeSection;
+    activeSection = nextSection;
     document.querySelectorAll("[data-section-link]").forEach((link) => {
       link.classList.toggle("is-active", link.dataset.sectionLink === activeSection);
       if (link.dataset.sectionLink === activeSection) link.setAttribute("aria-current", "location");
       else link.removeAttribute("aria-current");
     });
+    if (sectionChanged || (!sectionEngagementTimer && !sectionEngagementCounts.has(activeSection))) {
+      scheduleSectionEngagement(activeSection);
+    }
+  }
+
+  function scheduleSectionEngagement(sectionId) {
+    clearTimeout(sectionEngagementTimer);
+    sectionEngagementTimer = undefined;
+    if (document.visibilityState !== "visible") return;
+    sectionEngagementTimer = setTimeout(() => {
+      sectionEngagementTimer = undefined;
+      if (document.visibilityState !== "visible" || activeSection !== sectionId) return;
+      const engagementNumber = (sectionEngagementCounts.get(sectionId) || 0) + 1;
+      sectionEngagementCounts.set(sectionId, engagementNumber);
+      engagedSections.add(sectionId);
+      sectionEngagementsTotal += 1;
+      analytics.track("portfolio_section_engaged", {
+        section_id: sectionId,
+        engagement_number: engagementNumber,
+        is_reentry: engagementNumber > 1
+      });
+    }, 4000);
   }
 
   function sectionAtViewport() {
@@ -466,6 +499,11 @@
       link.addEventListener("click", (event) => {
         event.preventDefault();
         const sectionId = normaliseSection(link.getAttribute("href").slice(1));
+        analytics.track("portfolio_section_navigated", {
+          from_section_id: activeSection,
+          to_section_id: sectionId,
+          navigation_kind: link.closest(".section-pager") ? "section_pager" : "table_of_contents"
+        });
         navigationLockUntil = Date.now() + 1200;
         setActiveSection(sectionId);
         updateUrl(activeLanguage, sectionId, false);
@@ -476,6 +514,10 @@
 
   function openLightbox(button) {
     const image = button.querySelector("img");
+    analytics.track("portfolio_image_opened", {
+      section_id: button.closest(".article-section")?.id || "hero",
+      asset_name: button.dataset.lightboxSrc.split("/").pop() || "image"
+    });
     dom.lightboxImage.src = button.dataset.lightboxSrc;
     dom.lightboxImage.alt = image?.alt || "";
     dom.lightboxCaption.textContent = button.dataset.lightboxCaption || image?.alt || "";
@@ -504,7 +546,9 @@
   function handleScroll() {
     const root = document.documentElement;
     const available = root.scrollHeight - root.clientHeight;
-    dom.progress.style.width = `${available > 0 ? (root.scrollTop / available) * 100 : 0}%`;
+    const scrollDepthPercent = available > 0 ? (root.scrollTop / available) * 100 : 0;
+    maxScrollDepthPercent = Math.max(maxScrollDepthPercent, scrollDepthPercent);
+    dom.progress.style.width = `${scrollDepthPercent}%`;
     dom.topButton.classList.toggle("is-visible", root.scrollTop > 700);
     if (Date.now() >= navigationLockUntil) {
       const current = sectionAtViewport();
@@ -518,11 +562,41 @@
   document.querySelectorAll(".language-switcher button").forEach((button) => {
     button.addEventListener("click", () => {
       if (button.dataset.lang !== activeLanguage) {
+        const nextLanguage = button.dataset.lang;
+        analytics.track("portfolio_language_changed", {
+          from_language: activeLanguage,
+          to_language: nextLanguage,
+          section_id: activeSection
+        });
         const sectionFromUrl = location.hash.slice(1);
         setActiveSection(sectionFromUrl ? normaliseSection(sectionFromUrl) : sectionAtViewport());
-        render(button.dataset.lang, true);
+        render(nextLanguage, true);
       }
     });
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!(event.target instanceof Element)) return;
+    const link = event.target.closest("a[href]");
+    if (!link) return;
+    const href = new URL(link.href, location.href);
+    const label = link.textContent || link.getAttribute("aria-label") || "link";
+    if (href.pathname.toLowerCase().endsWith(".pdf")) {
+      analytics.track("portfolio_pdf_downloaded", {
+        section_id: link.closest(".article-section")?.id || "header",
+        asset_name: href.pathname.split("/").pop() || "portfolio.pdf"
+      });
+      return;
+    }
+    if (href.origin !== location.origin) {
+      analytics.track("portfolio_outbound_link_opened", {
+        section_id: link.closest(".article-section")?.id || "page",
+        link_kind: link.classList.contains("project-link") ? "project" : "reference",
+        link_label: label,
+        destination_host: href.host,
+        destination_path: href.pathname
+      });
+    }
   });
   dom.menuButton.addEventListener("click", openDrawer);
   dom.drawerClose.addEventListener("click", closeDrawer);
@@ -533,6 +607,40 @@
     if (event.target === dom.lightbox) dom.lightbox.close();
   });
   window.addEventListener("scroll", handleScroll, { passive: true });
+  document.addEventListener("visibilitychange", () => {
+    if (document.visibilityState === "visible") {
+      if (activeClockStartedAt === null) activeClockStartedAt = performance.now();
+      scheduleSectionEngagement(activeSection);
+    } else {
+      clearTimeout(sectionEngagementTimer);
+      sectionEngagementTimer = undefined;
+      if (activeClockStartedAt !== null) {
+        activeTimeMs += performance.now() - activeClockStartedAt;
+        activeClockStartedAt = null;
+      }
+    }
+  });
+  window.addEventListener("pagehide", () => {
+    if (summarySent) return;
+    if (activeClockStartedAt !== null) {
+      activeTimeMs += performance.now() - activeClockStartedAt;
+      activeClockStartedAt = null;
+    }
+    summarySent = true;
+    analytics.track("portfolio_reading_summary", {
+      section_id: activeSection,
+      max_scroll_depth_percent: Math.round(maxScrollDepthPercent),
+      active_time_ms: Math.round(activeTimeMs),
+      sections_engaged_unique: engagedSections.size,
+      section_engagements_total: sectionEngagementsTotal
+    }, { transport: "sendBeacon" });
+  });
+  window.addEventListener("pageshow", (event) => {
+    if (!event.persisted) return;
+    summarySent = false;
+    if (activeClockStartedAt === null) activeClockStartedAt = performance.now();
+    scheduleSectionEngagement(activeSection);
+  });
   window.addEventListener("popstate", () => {
     const nextLanguage = getInitialLanguage();
     activeSection = normaliseSection(location.hash.slice(1));
