@@ -1,8 +1,19 @@
 :root {
-  font-family: Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
   color: #102538;
   background: #dfe5e7;
   font-synthesis: none;
+}
+
+html[lang="zh-Hans"] {
+  font-family: Arial, "Noto Sans CJK SC", "Noto Sans SC", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+}
+
+html[lang="zh-Hant"] {
+  font-family: Arial, "Noto Sans CJK TC", "Noto Sans TC", "PingFang TC", "PingFang HK", "Hiragino Sans", "Microsoft JhengHei", sans-serif;
+}
+
+html[lang="en"] {
+  font-family: Arial, sans-serif;
 }
 
 * {

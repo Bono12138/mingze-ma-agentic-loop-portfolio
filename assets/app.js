@@ -87,6 +87,8 @@
   const protectedPhrases = [
     "Akulaku Group", "Agentic Loop", "Agentic Engineering", "Bono Agent", "Bono Insight",
     "World Cup Rank Room", "Claude Code", "Cursor CLI", "Financial Services Technology Risk",
+    "EY Financial Services Technology Risk", "重新整理成一个内部项目", "重新整理成一個內部項目",
+    "不再围绕某一个工具", "不再圍繞某一個工具",
     "Expected Credit Loss", "Artificial Intelligence", "风险管理", "金融风险", "操作风险",
     "基础设施", "基礎設施", "审计回应", "審計回應", "系统控制", "系統控制",
     "数据处理", "數據處理", "财务对账", "財務對賬", "外部审阅", "外部審閱",
@@ -253,7 +255,10 @@
     if (preserveScroll) navigationLockUntil = Date.now() + 1500;
     activeLanguage = language;
     dom.html.lang = locale.htmlLang;
-    document.title = `${locale.title}｜${language === "en" ? "Mingze Ma" : "马铭泽"}`;
+    const displayName = language === "en" ? "Mingze Ma" : language === "zh-Hant" ? "馬銘澤" : "马铭泽";
+    document.title = `${locale.title}｜${displayName}`;
+    document.querySelector(".identity-name").textContent = displayName;
+    document.querySelector(".identity").setAttribute("aria-label", `${displayName}，${locale.labels.top}`);
     document.querySelector('meta[name="description"]').content = locale.summary;
     dom.title.setAttribute("aria-label", locale.title);
     dom.title.innerHTML = `
@@ -267,7 +272,8 @@
     dom.roleList.replaceChildren(...locale.roles.map((role, index) => {
       const item = document.createElement("div");
       item.className = "role-item";
-      item.innerHTML = `<span class="role-number">0${index + 1}</span><span>${escapeHtml(role)}</span>`;
+      const segments = roleSegments(role, language);
+      item.innerHTML = `<span class="role-number">0${index + 1}</span><span>${segments.map((segment) => `<span class="semantic-unit">${escapeHtml(segment)}</span>`).join(" ")}</span>`;
       return item;
     }));
     applyLabels(locale);
@@ -306,7 +312,7 @@
     });
     bindGeneratedInteractions();
     setActiveSection(targetId);
-    updateUrl(language, targetId, false);
+    updateUrl(language, preserveScroll || location.hash ? targetId : "", false);
     if (preserveScroll) {
       const restoreSection = () => {
         document.getElementById(targetId)?.scrollIntoView({ block: "start", behavior: "instant" });
@@ -347,6 +353,11 @@
       if (element.closest("pre, code, a, button") || element.children.length > 0) return;
       wrapTextNode(element, language);
     });
+  }
+
+  function roleSegments(role, language) {
+    if (language === "en" && role === "ITGC, ITAC and systems control") return ["ITGC, ITAC", "systems control"];
+    return [role];
   }
 
   function wrapTextNode(element, language) {
@@ -574,6 +585,14 @@
           section_id: activeSection
         });
         const sectionFromUrl = location.hash.slice(1);
+        const firstSection = document.querySelector(".article-section");
+        const headerHeight = Number.parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--header-height"));
+        const aboveArticle = !sectionFromUrl && firstSection?.getBoundingClientRect().top > headerHeight + 20;
+        if (aboveArticle) {
+          activeSection = "background";
+          render(nextLanguage, false);
+          return;
+        }
         setActiveSection(sectionFromUrl ? normaliseSection(sectionFromUrl) : sectionAtViewport());
         render(nextLanguage, true);
       }
@@ -648,7 +667,14 @@
   });
   window.addEventListener("popstate", () => {
     const nextLanguage = getInitialLanguage();
-    activeSection = normaliseSection(location.hash.slice(1));
+    const sectionFromUrl = location.hash.slice(1);
+    if (!sectionFromUrl) {
+      activeSection = "background";
+      if (nextLanguage !== activeLanguage) render(nextLanguage, false);
+      window.scrollTo({ top: 0, behavior: "instant" });
+      return;
+    }
+    activeSection = normaliseSection(sectionFromUrl);
     if (nextLanguage !== activeLanguage) render(nextLanguage, true);
     else document.getElementById(activeSection)?.scrollIntoView();
   });
