@@ -457,10 +457,15 @@
       sectionEngagementCounts.set(sectionId, engagementNumber);
       engagedSections.add(sectionId);
       sectionEngagementsTotal += 1;
+      const measuredActiveTimeMs = activeTimeMs + (activeClockStartedAt === null ? 0 : performance.now() - activeClockStartedAt);
       analytics.track("portfolio_section_engaged", {
         section_id: sectionId,
         engagement_number: engagementNumber,
-        is_reentry: engagementNumber > 1
+        is_reentry: engagementNumber > 1,
+        max_scroll_depth_percent: Math.round(maxScrollDepthPercent),
+        active_time_ms: Math.round(measuredActiveTimeMs),
+        sections_engaged_unique: engagedSections.size,
+        section_engagements_total: sectionEngagementsTotal
       });
     }, 4000);
   }
