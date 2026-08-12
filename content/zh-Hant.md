@@ -146,7 +146,7 @@ Bono Insight 已經整理出可安裝的 Skill、參考方法、驗證腳本、�
 
 - [BonoBox](https://github.com/Bono12138/bonobox)：把網頁、新聞和圖片搜索整理成可安裝的 Python/MCP 工具，包含安裝、測試、錯誤邊界和公開發布；
 - [Quota Capsule](https://github.com/Bono12138/codex-quota-capsule)：讀取本機 Codex 配額信息，結合近期使用速度判斷本周餘量，並在 macOS 選單列提示；
-- [World Cup Rank Room](https://worldcup-rank-room.pages.dev/)：把內部世界盃活動的排名、隊伍比較和 AI 輔助問答做成可以直接訪問的網站，並使用獨立數據和公開部署。
+- [World Cup Rank Room](https://worldcup-rank-room.pages.dev/)：把內部世界盃活動的排名和隊伍比較做成可以直接訪問的網站，並使用獨立數據和公開部署。
 
 這些項目大小不同，工作方式卻很接近：先把問題說清楚，確定使用邊界和驗收方式，再讓 Agent 加速實現、調試、測試和發布。每個項目都同時保留程式碼、安裝方式、測試結果、失敗處理、版本記錄和給下一位使用者的說明。
 

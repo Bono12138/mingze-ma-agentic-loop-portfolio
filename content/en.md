@@ -154,7 +154,7 @@ I use agents to turn smaller problems into working tools and websites:
 
 - [BonoBox](https://github.com/Bono12138/bonobox) packages web, news and image search as an installable Python/MCP tool, with installation, testing, failure boundaries and a public release.
 - [Quota Capsule](https://github.com/Bono12138/codex-quota-capsule) reads local Codex quota information, combines it with recent usage pace, and shows the expected weekly runway in the macOS menu bar.
-- [World Cup Rank Room](https://worldcup-rank-room.pages.dev/) turns an internal World Cup activity into an accessible site for rankings, team comparison and AI-assisted questions, using a separate public dataset and deployment.
+- [World Cup Rank Room](https://worldcup-rank-room.pages.dev/) turns an internal World Cup activity into an accessible site for rankings and team comparison, using a separate public dataset and deployment.
 
 The projects differ in size, but the working pattern is similar: define the problem, usage boundary and acceptance conditions, then use agents to accelerate implementation, debugging, testing and release. Each project retains code, installation instructions, tests, failure handling, version history and guidance for the next user.
 
