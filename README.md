@@ -24,5 +24,6 @@ The published site uses only project diagrams, authorised materials and screensh
 - Trilingual PDF: <https://bono12138.github.io/mingze-ma-agentic-loop-portfolio/downloads/Mingze-Ma-Agentic-Loop-Portfolio.pdf>
 - Website QR code: `downloads/portfolio-qr.png`
 - Mobile portfolio cards: `share/Mingze-Ma-Portfolio-Card-zh-Hans.png`, `share/Mingze-Ma-Portfolio-Card-zh-Hant.png`, and `share/Mingze-Ma-Portfolio-Card-en.png`
+- Independent CuiMao application page, resume, and candidate-review Skill demonstration: <https://bono12138.github.io/mingze-ma-agentic-loop-portfolio/cuimao/>. This is an applicant-created page, not a recruiter-approved hiring process.
 
 The World Cup card uses `assets/images/worldcup-rank-room-live-20260806.png`, captured from the live site. It is not a recreated mock-up.
