@@ -1,44 +1,40 @@
-# Demo candidate brief: Mingze Ma (Bono)
+# 演示卡：马铭泽 Bono
 
-This is a sample output made from the applicant's own published materials, not a recruiter decision. Sources were reviewed on 2026-09-23. The recruiter should verify each link and the role profile before relying on it.
+这是 Skill 作者用自己的公开 [PDF 简历](https://bono12138.github.io/mingze-ma-agentic-loop-portfolio/cuimao/Mingze-Ma-CuiMao-Resume.pdf) 做的本地测试，不是 CuiMao 的评价或真实筛选结论。岗位标准仍是[待确认草案](role-profile.md)，所以表格只示范如何找证据与留下疑点。没有使用其他候选人的资料。
 
-Original materials: [application page](https://bono12138.github.io/mingze-ma-agentic-loop-portfolio/cuimao/), [resume](https://bono12138.github.io/mingze-ma-agentic-loop-portfolio/cuimao/resume.html), [GitHub](https://github.com/Bono12138), [LinkedIn](https://www.linkedin.com/in/mingze-ma-950a78179/).
+## 本地收件测试
 
-Demo run ID: `demo-bono-2026-09-23`. Role profile: candidate-authored draft, not recruiter-confirmed. Review status: sample only.
+把这份三页 PDF、同一 PDF 的副本和一份候选人主动提供链接的 `links.txt` 放进同一个私人收件子文件夹，运行 `scripts/prepare_batch.py`。结果是 1 位候选人分组、3 个文件、1 个重复文件；PDF 三页文字全部抽取，生成了原件副本、逐页文字、`manifest.json` 和 `intake-summary.md`。运行输出保留在本机临时私人目录，没有上传到本仓库。
 
-## 30-second brief
+## 30 秒看完
 
-Bono lives in Shenzhen Nanshan and reports work on IFRS 9 ECL implementation, after roles at PwC Hong Kong and EY Shenzhen. His [public portfolio](https://bono12138.github.io/mingze-ma-agentic-loop-portfolio/) and [GitHub](https://github.com/Bono12138) show AI-assisted tool and workflow projects; [BB Box](https://bono12138.github.io/bb-box-show/) shows an early-stage creator project. Spoken English, filming depth, AI compute industry knowledge, travel availability, and precise personal delivery scope still need direct confirmation.
+简历显示 Bono 在深圳南山，现负责 Akulaku Group 的 IFRS 9 ECL 技术与实施，此前在深圳安永咨询工作；他主动提供了 [GitHub](https://github.com/Bono12138) 和 [LinkedIn](https://www.linkedin.com/in/mingze-ma-950a78179/) 链接。PDF 第 3 页列出公开工具及正在筹备的内容项目。英语口语、AI 算力产业理解、出差适配度和拍摄的具体作品，还需要直接核对。
 
-## Open these first
+## 先打开这些
 
-1. [Agent project portfolio](https://bono12138.github.io/mingze-ma-agentic-loop-portfolio/) — the clearest account of workflow and delivery scope.
-2. [BonoBox repository](https://github.com/Bono12138/bonobox) — inspect code, instructions, and limits rather than relying on a skill claim.
-3. [BB Box site](https://bono12138.github.io/bb-box-show/) — understand the creator project and its current stage.
+1. [PDF 简历](https://bono12138.github.io/mingze-ma-agentic-loop-portfolio/cuimao/Mingze-Ma-CuiMao-Resume.pdf)：第 2 页看实际工作范围，第 3 页看作品与本人贡献说明。
+2. [GitHub 主页](https://github.com/Bono12138)：从候选人主动提供的仓库核对代码、安装说明和维护记录；本地收件脚本没有自动检查这些网页。
+3. [BonoBox](https://github.com/Bono12138/bonobox)：看一个具体工具是否能按说明运行，问清本人写了什么。
 
-## Identity of supplied profiles
+## 对照岗位草案
 
-The application itself links the GitHub and LinkedIn profiles. These are candidate-supplied links, not independently verified identity records. The Douyin QR is likewise candidate-supplied. No other profile has been attached by a name-only search.
+| 草案能力 | 现有状态 | 这次测试能定位到的材料 | 证据类型 | 还需确认 |
+|---|---|---|---|---|
+| 实际使用 AI | 部分证据 | PDF 第 1 页自述日常使用 ChatGPT、Codex、Cursor 等；第 2 页描述如何把 Agent 接入查询、计算和交付。 | 简历自述；作品链接待打开 | 选一个项目看运行过程、错误处理和本人决策。 |
+| 正式 coding 项目交付 | 部分证据 | PDF 第 2 页列工作交付；第 3 页列 BonoBox、Quota Capsule 等公开项目。 | 工作经历自述；公开链接待核对 | 哪些代码由本人完成？用户、测试与维护情况如何？ |
+| AI 算力产业了解 | 尚无具体证据 | PDF 第 1 页写 AI 兴趣，第 3 页列工具；没有算力产业研究样本。 | 简历自述 | 用一页简报或现场讨论验证，不以金融 ECL 经历替代。 |
+| 英语交流 | 尚无直接证据 | PDF 第 1 页写“工作英语”，第 3 页列香港理工大学本科。 | 简历自述 | 当面用英语聊实际工作。 |
+| 出差与现场协作 | 部分证据 | PDF 第 1 页写愿意做出发前准备、现场记录和后续整理。 | 意愿自述 | 可出差频率、临时安排和真实现场经验。 |
+| 内容与拍摄 | 部分证据 | PDF 第 3 页写英语社节目制作和正在筹备的「BB 箱子」。 | 简历自述；未提供成片 | 要作品和具体分工，不把筹备项目写成已播出。 |
 
-## Evidence against draft criteria
+候选人提供这些账号链接，不等于账号身份或作品贡献已经由招聘者确认。
 
-| Criterion | Status | Evidence and source | What remains unknown |
-|---|---|---|---|
-| Actual AI use | Supported for documented projects | [Portfolio](https://bono12138.github.io/mingze-ma-agentic-loop-portfolio/) explains workflows and boundaries; [GitHub](https://github.com/Bono12138) contains public tools. | Which tools and decisions were personally owned versus Agent-generated or team work? |
-| Formal coding delivery | Partly supported | Public repositories show working tools and sites, including [BonoBox](https://github.com/Bono12138/bonobox). Resume reports internal delivery. | Production ownership, users, tests, and maintenance evidence for employer projects. |
-| Spoken English | Not yet evidenced | Candidate reports fluent working English and a Hong Kong Polytechnic University bachelor's degree. | Confirm in an English conversation. |
-| AI compute industry | Not yet evidenced | Candidate reports strong interest in AI; no specific compute supply-chain work sample supplied. | Ask for a short briefing or discussion. |
-| Travel and field work | Partly supported | Candidate is in Shenzhen and expresses willingness. | Frequency, notice period, and real examples of field work. |
-| Content and filming | Partly supported | [BB Box](https://bono12138.github.io/bb-box-show/) describes a show being assembled; candidate reports university program production. | Finished footage, exact filming/editing role, and on-camera comfort. |
+## 面谈可问
 
-Source trace examples: the [resume, “Work experience”](https://bono12138.github.io/mingze-ma-agentic-loop-portfolio/cuimao/resume.html) says “目前的工作涉及预期信用损失（ECL）的方法、数据、系统需求、测试、财务核对和审阅支持。” This is a candidate statement, not employer verification. The [resume, “Content, production and communication”](https://bono12138.github.io/mingze-ma-agentic-loop-portfolio/cuimao/resume.html) says the BB Box show is “目前正在深圳组建”; the card therefore does not count it as an already published filming result.
+1. 选一个 GitHub 工具，现场说说你自己决定、写、测和维护的部分，以及一次实际出错后怎样修。
+2. 用英语介绍一家你想跟猫姐去看的 AI 基础设施公司，给出两处可核对来源和三个采访问题。
+3. 带一份拍摄或节目制作材料，说明你的策划、拍摄、剪辑和发布分工；「BB 箱子」目前进展到哪一步？
 
-## Interview questions
+## 招聘者下一步
 
-1. Pick one public tool. What did you personally decide, code, test, and maintain? What broke after release?
-2. In English, give a two-minute briefing on an AI infrastructure company you would want CuiMao to visit, with two checked sources and three interview questions.
-3. Show a piece of content or production material and explain your exact part in planning, shooting, editing, and publishing it.
-
-## Reviewer notes
-
-The value of a meeting depends on the actual assistant duties. The candidate has a plausible combination of documented tool-building, structured project delivery, and an early creator project; several job-specific items are still self-reported. No automated hire or reject verdict is made.
+先核对公开项目和原件，再决定是否约 20 分钟交流。这里没有自动评分、排序或淘汰。

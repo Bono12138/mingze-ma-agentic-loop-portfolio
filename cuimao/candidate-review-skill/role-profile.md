@@ -1,32 +1,30 @@
-# Draft role profile for recruiter confirmation
+# 岗位草案：使用前请招聘者确认
 
-Source: [CuiMao's public recruitment post](https://x.com/CuiMao/status/2102352863574073588), as captured in a screenshot supplied by Mingze Ma on 2026-09-23. This is a candidate's interpretation, not an employer-approved job description. Check the current post and any updates before use.
+来源：[CuiMao 的公开招聘帖](https://x.com/CuiMao/status/2102352863574073588)。以下是应聘者根据公开信息作的整理，**不是雇主确认过的岗位说明**。开始实际筛选前，请核对原帖和后续更新，并记下确认日期、确认人和版本。
 
-## Stated in the post
+## 原帖涉及的方向
 
-- Role: personal assistant, based in Shenzhen Longhua; global travel with CuiMao.
-- Applicant should be an AI enthusiast. The post names formal coding project delivery, AI industry familiarity, spoken English, knowledge of the AI compute industry, interest in the creator's work, and participation in filming as pay-related pluses.
-- The post also separately mentions hiring an AI content director, with remote collaboration possible first.
+- 个人助理岗位在深圳龙华，会跟随 CuiMao 到各地工作。
+- 希望候选人对 AI 感兴趣、愿意交流。正式 coding 项目交付、熟悉 AI 行业、英语口语、了解 AI 算力产业、喜欢她的内容，以及参与拍摄，是帖子提到的加分方向。
+- 帖子另有 AI 内容导演岗位，开始时可以远程协作；不要把那份岗位的全部工作自动套在个人助理身上。
 
-## Questions the recruiter should settle
+## 招聘者先确认五件事
 
-1. What are the three most frequent tasks for the assistant during an ordinary month?
-2. Which coding, research, travel, filming, and content tasks belong to the assistant, and which to the separately recruited content role?
-3. Which capabilities are essential on day one, and which can be learned after joining?
-4. What samples demonstrate useful work: shipped tool, research brief, interview preparation, filmed material, edited piece, or English conversation?
-5. What are the work arrangements and decision-maker for review, interview, and offer?
+1. 平时最占时间的三件事是什么？助理先接哪几件？
+2. 研究、出差、拍摄、内容、工具开发怎样与内容导演分工？
+3. 哪些能力入职就要有，哪些是加分或可以学？
+4. 什么材料最能说明做过：发布的工具、研究简报、采访准备、拍摄成片、英语讨论，还是其他？
+5. 谁核对候选人卡、决定约面？候选人材料保留在哪里，多久清理？
 
-Until the recruiter answers, use the stated items as discussion topics, not fixed weights. Do not manufacture a total score or reverse-engineer criteria around any applicant.
+## 待确认的能力表
 
-## Draft competencies to confirm before a batch
-
-| Proposed competency | Evidence to look for | What the public post does not settle |
+| 草案能力 | 看什么材料 | 仍需招聘者确定 |
 |---|---|---|
-| Practical AI use | A concrete task, tool choice, output, and checks | Whether daily AI use alone is enough |
-| Shipping technical work | A delivered coding project with personal contribution and users or tests | Whether this is essential or a pay-related plus |
-| Research and AI compute | A sourced briefing or discussion of a company, product, or compute topic | Required depth and which subsectors matter |
-| English communication | A short live discussion about the actual work | Required frequency and level |
-| Travel and field coordination | Examples of preparation, follow-up, logistics, and availability | Schedule, notice period, and location arrangement |
-| Content and collaboration | Published work or a specific production contribution | Split between assistant and AI content director roles |
+| 实际使用 AI | 具体任务、工具选择、产物和检查过程 | 日常使用达到什么程度才有帮助 |
+| 交付技术项目 | 能打开的项目、本人贡献、使用者或测试 | 必须项还是加分项 |
+| 调研与 AI 算力 | 有来源的公司、产品或算力产业简报 | 需要哪个细分领域、深到什么程度 |
+| 英语沟通 | 针对实际工作的短时英语交流 | 使用频率和要求 |
+| 出差与现场协作 | 准备、记录、协调、跟进的例子与可用时间 | 出差频率、通知时间、办公地点 |
+| 内容与拍摄 | 已发布作品或明确的制作分工 | 与内容导演岗位的界线 |
 
-This is a proposal for CuiMao to edit, not a scorecard. Freeze the confirmed version for each review run. Do not use birthplace, school prestige, personality type, appearance, or follower count as substitutes for these work examples.
+在招聘者确认前，这些只能用于讨论和演示，不可自行设分数、权重或淘汰线。确认后把版本与每批 `manifest.json` 一起记录；标准变动时保留旧版本并说明变动。

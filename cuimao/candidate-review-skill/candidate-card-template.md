@@ -1,54 +1,46 @@
-# Candidate: [name or private ID]
+# 候选人 [编号]：[提交时使用的姓名]
 
-Run ID: [ID] · Reviewed: [date] · Reviewer: [name] · Role profile: [version]
+批次：[run ID] · 岗位标准：[版本及确认人] · 整理日期：[日期] · 人工核对：[姓名/待核对]
 
-## Original and supplied material
+## 30 秒看完
 
-| Kind | Source or private file link | Provided by | Received |
-|---|---|---|---|
-| Original resume | | Candidate / authorised channel | |
-| Portfolio / GitHub / LinkedIn | | Candidate | |
+[两到四句：最相关的经历、可以打开的证据、关键未知点。不要写自动录用/淘汰结论。]
 
-Keep contact details in the recruiter's authorised private workspace. Do not put them in a public card.
+## 先打开这些
 
-## 30-second brief
+1. [原始简历相对路径或私人链接；为什么先看]
+2. [候选人主动提供的作品 URL；需要核对什么]
+3. [可选的第三份材料]
 
-[Two to four factual sentences. State the strongest evidence and the most important unknowns. No automatic hire or reject verdict.]
+## 原件与身份
 
-## Open these first
-
-1. [Direct link and why it matters]
-2. [Direct link and why it matters]
-3. [Optional direct link]
-
-## Identity check for public profiles
-
-| Profile | Supplied or discovered | Match basis | Status |
-|---|---|---|---|
-| | | Candidate-provided / explicit cross-link / candidate confirmation / uncertain | Confirmed / unconfirmed identity |
-
-Do not use an unconfirmed profile as candidate evidence.
-
-## Evidence against confirmed job competencies
-
-| Competency | Status | Exact excerpt or work example | Source and page/section | What remains unknown |
+| 材料 | 原件路径/URL | 谁提供 | 是否能打开/读清 | 身份匹配 |
 |---|---|---|---|---|
-| | Supported / partly supported / not yet evidenced | | | |
+| 简历 | | 候选人/授权渠道 | | 原件 |
+| 作品账号 | | 候选人/明确交叉链接/待确认 | | 已确认/待确认 |
 
-For every item, distinguish candidate self-report from a public work sample and a reviewer-checked fact. Missing evidence is a question, not a negative claim.
+公开账号无法确定是不是本人时，不把其中的内容算成候选人证据。联系方式留在招聘者的私人工作区。
 
-## Questions to verify
+## 对照岗位标准
 
-1. [Question connected to an evidence gap]
-2. [Question connected to an evidence gap]
-3. [Question connected to an evidence gap]
-
-## Optional common work sample
-
-[Task approved by recruiter, same instructions and time limit for comparable candidates; link to submitted work and review notes.]
-
-## Reviewer notes and status history
-
-| Date | Status | Reviewer | Reason or correction | Card version |
+| 已确认的能力 | 现有状态 | 事实、本人贡献与证据位置 | 证据类型 | 还需确认 |
 |---|---|---|---|---|
-| | New / reviewed / follow-up / interview / closed | | | |
+| | 有具体证据 / 部分证据 / 尚无证据 | 简历第 X 页原话；或可打开的作品 URL | 自述 / 公开作品 / 人工核实 | |
+
+“尚无证据”只表示这批材料没说明，不能写成“候选人不会”。公司内部项目、团队项目和 Agent 生成物要分别写明本人做了什么、哪里还无法验证。
+
+## 面谈或补材料时问
+
+1. [最可能改变判断的问题]
+2. [核对个人贡献的问题]
+3. [岗位实际工作方式的问题]
+
+## 招聘者下一步
+
+[待核对原件 / 请候选人补一项材料 / 值得进一步交流 / 已完成人工评估。这里只是整理建议，由招聘者确认并记录动作。]
+
+## 核对与更正记录
+
+| 日期 | 核对人 | 更正/决定 | 依据 | 卡片版本 |
+|---|---|---|---|---|
+| | | | | |
