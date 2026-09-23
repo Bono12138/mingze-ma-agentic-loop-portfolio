@@ -1,87 +1,84 @@
 <!doctype html>
 <html lang="zh-CN">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="马铭泽 Bono 给 CuiMao 的个人助理申请简历：AI 工具、项目交付、英语沟通和内容制作。">
-  <title>马铭泽 Bono｜给 CuiMao 的完整简历</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    .resume-page{max-width:900px;padding-bottom:75px}
-    .resume-page header{gap:34px}
-    .resume-page .resume-links{min-width:205px}
-    .resume-page h2{font-size:25px;margin:40px 0 16px}
-    .resume-page h3{font-size:18px;margin:23px 0 8px}
-    .resume-page p,.resume-page li{font-size:15px;line-height:1.78}
-    .resume-page ul{margin:9px 0 0}
-    .resume-page li+li{margin-top:7px}
-    .resume-kicker{color:var(--blue);font-weight:700;letter-spacing:.08em;font-size:12px!important}
-    .resume-page .prompt-block{white-space:pre-wrap;font-size:13px;line-height:1.75;padding:21px 23px}
-    .resume-page .resume-note{border-left:3px solid var(--blue);padding:10px 18px;background:#f4eee5}
-    .resume-page .resume-note p{margin:0}
-    .resume-page .project-links{display:flex;flex-wrap:wrap;gap:13px 23px;margin:15px 0}
-    .resume-page .project-links a{color:var(--blue);font-weight:700}
-    .resume-page .minor{font-size:13px}
-    @media(max-width:620px){.resume-page header{display:block}.resume-page .resume-links{margin-top:16px}.resume-page p,.resume-page li{font-size:14px}.resume-page h2{font-size:22px}}
-    @media print{
-      @page{size:A4;margin:13mm 14mm}
-      body{background:#fff}
-      .resume-page{max-width:none;padding:0;color:#211c19}
-      .resume-page .resume-nav{display:none}
-      .resume-page header{padding-bottom:13px}
-      .resume-page h1{font-size:31px}
-      .resume-page h2{font-size:20px;margin:24px 0 11px;padding-bottom:6px;break-after:avoid}
-      .resume-page h3{font-size:16px;margin:17px 0 6px;break-after:avoid}
-      .resume-page p,.resume-page li{font-size:13px;line-height:1.6}
-      .resume-page li+li{margin-top:3px}
-      .resume-page ul{margin:5px 0 0;padding-left:19px}
-      .resume-page .subtitle{font-size:13px}
-      .resume-page .resume-links{font-size:10px;min-width:155px}
-      .resume-page .prompt-block{font-size:12px;line-height:1.55;padding:14px 16px}
-      .resume-page .minor{font-size:11px}
-      .resume-page .resume-note{padding:7px 12px}
-      .resume-page .project-links{margin:8px 0}
-      a{color:inherit;text-decoration:none}
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="马铭泽 Bono 给 CuiMao 的个人助理申请简历。">
+<title>马铭泽 Bono｜给 CuiMao 的简历</title>
+<style>
+:root{--ink:#29231f;--muted:#6e625a;--accent:#a64b35;--line:#ded4c9;--paper:#fffdfa;--tint:#f7f0e9}
+*{box-sizing:border-box}html{background:#e9e5df}body{margin:0;color:var(--ink);font-family:"Microsoft YaHei UI","PingFang SC",Arial,sans-serif;font-size:13px;line-height:1.65}a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+.nav{max-width:210mm;margin:22px auto 12px;font-size:12px}.nav a{margin-right:20px}
+.sheet{position:relative;width:210mm;min-height:297mm;margin:0 auto 24px;padding:17mm 18mm 18mm;background:var(--paper);box-shadow:0 7px 28px #45382b20;overflow:hidden}
+.eyebrow{margin:0 0 12px;color:var(--accent);font-size:10px;font-weight:700;letter-spacing:.12em}
+.masthead{display:grid;grid-template-columns:1fr 190px;gap:30px;align-items:start;padding-bottom:17px;border-bottom:2px solid var(--accent)}
+h1,h2,h3,p,ul{margin-top:0}h1{margin:0 0 4px;font-family:Georgia,"Songti SC",serif;font-size:36px;line-height:1.18}h1 span{font-size:23px;font-weight:400}
+.role{margin:0 0 10px;color:var(--accent);font-size:15px;font-weight:700}.lead{margin:0;font-size:13px;line-height:1.72}
+.contact{border-left:1px solid var(--line);padding-left:15px;font-size:11px;line-height:1.8}.contact b{display:block;margin-bottom:4px;color:var(--muted)}.contact a{display:block;word-break:break-all}
+.section{margin-top:21px}.section-head{display:flex;align-items:baseline;gap:11px;margin-bottom:9px;padding-bottom:6px;border-bottom:1px solid var(--line)}.section-head em{font-style:normal;color:var(--accent);font-size:10px;font-weight:700;letter-spacing:.1em}h2{margin:0;font-family:Georgia,"Songti SC",serif;font-size:19px;line-height:1.35;font-weight:600}
+.prompt{padding:13px 15px;background:var(--tint);border-left:3px solid var(--accent);font-size:11.5px;line-height:1.7;white-space:pre-wrap;overflow-wrap:anywhere}.prompt-note{margin:6px 0 0;color:var(--muted);font-size:10px}
+.summary{display:grid;grid-template-columns:1.2fr .8fr;gap:22px}.summary p{margin:0 0 8px}.fact-list{list-style:none;padding:0;margin:0}.fact-list li{padding:4px 0;border-bottom:1px solid var(--line);font-size:11.5px}.fact-list strong{display:inline-block;width:46px;color:var(--accent)}
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.small-card{padding:11px 12px;border:1px solid var(--line);background:#fff}.small-card strong{display:block;margin-bottom:5px;color:var(--accent);font-size:12px}.small-card p{margin:0;font-size:11.5px;line-height:1.62}
+.page-top{display:flex;justify-content:space-between;align-items:baseline;padding-bottom:10px;border-bottom:2px solid var(--accent)}.page-top .eyebrow{margin:0}.page-top span{color:var(--muted);font-size:11px}
+.entry{margin:15px 0 0;padding-bottom:11px;border-bottom:1px solid var(--line)}.entry:last-child{border:0}.entry-title{display:flex;justify-content:space-between;gap:14px;align-items:baseline;margin-bottom:5px}.entry h3{margin:0;font-size:15px;line-height:1.45}.date{flex:none;color:var(--accent);font-size:11px;font-weight:700}.entry .context{margin:0 0 8px;color:var(--muted);font-size:11.5px}.entry ul{margin:0;padding-left:18px}.entry li{margin:0 0 5px;padding-left:2px;font-size:12px;line-height:1.65}.entry li::marker{color:var(--accent)}
+.project{display:grid;grid-template-columns:128px 1fr;gap:12px;padding:10px 0;border-bottom:1px solid var(--line)}.project:last-child{border:0}.project h3{margin:0;font-size:12.5px;line-height:1.5}.project p{margin:0;font-size:11.5px;line-height:1.63}.project a{font-size:11px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}.panel{padding:12px 14px;background:var(--tint)}.panel h3{margin:0 0 6px;font-size:12.5px}.panel p{margin:0;font-size:11.5px;line-height:1.65}.panel p+p{margin-top:5px}
+.closing{padding:15px 17px;border:1px solid var(--accent);background:#fff}.closing p{margin:0;font-size:12px;line-height:1.75}.closing p+p{margin-top:7px}.closing strong{color:var(--accent)}
+.folio{position:absolute;left:18mm;right:18mm;bottom:11mm;display:flex;justify-content:space-between;border-top:1px solid var(--line);padding-top:5px;color:#8a8179;font-size:9px}
+@media(max-width:850px){.nav{margin:14px 16px}.sheet{width:auto;min-height:0;margin:0 10px 15px;padding:27px 22px 48px}.folio{left:22px;right:22px;bottom:13px}.masthead{grid-template-columns:1fr}.contact{border-left:0;border-top:1px solid var(--line);padding:9px 0 0}.summary,.three,.two{grid-template-columns:1fr}.project{grid-template-columns:1fr;gap:3px}.entry-title{display:block}.date{display:block;margin-top:2px}}
+@media print{@page{size:A4;margin:0}html,body{background:#fff}body{-webkit-print-color-adjust:exact;print-color-adjust:exact}.nav{display:none}.sheet{width:210mm;height:297mm;min-height:0;margin:0;padding:17mm 18mm 18mm;box-shadow:none;break-after:page}.sheet:last-child{break-after:auto}a{color:var(--accent)}}
+</style>
+<style media="print">
+.masthead{grid-template-columns:1fr 190px}
+.contact{border-left:1px solid var(--line);border-top:0;padding:0 0 0 15px}
+.summary{grid-template-columns:1.2fr .8fr}
+.three{grid-template-columns:repeat(3,1fr)}
+.two{grid-template-columns:1fr 1fr}
+.project{grid-template-columns:150px 1fr;gap:12px}
+.entry-title{display:flex}
+.date{display:inline;margin:0}
+.folio{left:18mm;right:18mm;bottom:11mm}
+</style>
 </head>
 <body>
-<main class="resume-page">
-  <p class="resume-nav"><a href="index.html">← 返回申请页</a>　·　<a href="Mingze-Ma-CuiMao-Resume.pdf" download>下载 PDF 简历</a>　·　<a href="candidate-review-skill.zip" download>下载招聘 Skill</a></p>
-  <header>
-    <div><p class="resume-kicker">CUIMAO 老师专属申请 · ONLY FOR CUIMAO</p><h1>马铭泽 Bono</h1><p class="subtitle">深圳南山 · AI 狂热使用者 · 金融风险与项目交付</p><p>我想应聘猫姐的个人助理。我的长处是能跟人聊、能查清楚一件事，也能把需要的小工具做出来。希望见面聊聊，看看我能替你接住哪些具体工作。</p></div>
-    <div class="resume-links"><a href="https://bono12138.github.io/mingze-ma-agentic-loop-portfolio/cuimao/">申请网站 ↗</a><br><a href="https://github.com/Bono12138">GitHub ↗</a><br><a href="https://www.linkedin.com/in/mingze-ma-950a78179/">LinkedIn ↗</a><br><a href="https://bono12138.github.io/bb-box-show/">BB 箱子 ↗</a><br>抖音：BB箱子（huotuichang439）</div>
-  </header>
+<nav class="nav"><a href="index.html">← 返回申请页</a><a href="Mingze-Ma-CuiMao-Resume.pdf" download>下载 PDF 简历</a><a href="candidate-review-skill.zip" download>下载招聘 Skill</a></nav>
+<main>
+<article class="sheet">
+<p class="eyebrow">ONLY FOR CUIMAO · 个人助理申请</p>
+<header class="masthead"><div><h1>马铭泽 <span>Bono</span></h1><p class="role">能聊 AI，也能把事做完的人</p><p class="lead">猫姐，我在深圳南山。做过金融风险咨询和跨团队项目交付，现在负责 Akulaku Group 的 IFRS 9 ECL 技术与实施。我想把研究、沟通、工具和现场协作的能力带到你身边，帮你腾出时间做更想做的事。</p></div><div class="contact"><b>公开资料</b><a href="https://bono12138.github.io/mingze-ma-agentic-loop-portfolio/cuimao/">给猫姐的申请网站 ↗</a><a href="https://github.com/Bono12138">GitHub · Bono12138 ↗</a><a href="https://www.linkedin.com/in/mingze-ma-950a78179/">LinkedIn · Mingze Ma ↗</a><span>抖音：BB箱子<br>huotuichang439</span></div></header>
+<section class="section"><div class="section-head"><em>01</em><h2>时间宝贵，可以先让 Agent 帮猫姐看</h2></div><div class="prompt">你是 CuiMao 招聘个人助理时的阅读助手。先看招聘原帖：https://x.com/CuiMao/status/2102352863574073588 ，再看马铭泽 Bono 的申请网站：https://bono12138.github.io/mingze-ma-agentic-loop-portfolio/cuimao/ ，以及网站上的简历、GitHub、LinkedIn 和 BB箱子。若原帖无法访问，请说明限制，不要补造岗位要求。
 
-  <section class="resume-prompt"><h2>先给猫姐的 Agent 一段可复制的提示词</h2><div class="prompt-block">你是 CuiMao 招聘个人助理时的阅读助手。先看招聘原帖：https://x.com/CuiMao/status/2102352863574073588 ，再看马铭泽 Bono 的申请页 https://bono12138.github.io/mingze-ma-agentic-loop-portfolio/cuimao/ 、完整简历 https://bono12138.github.io/mingze-ma-agentic-loop-portfolio/cuimao/resume.html 和他主动提供的 GitHub、LinkedIn、BB箱子链接。若原帖无法访问，请说明限制，不要补造岗位要求。
+从猫姐需要一位热爱 AI、愿意交流、能随行调研和出差的助理出发，判断 Bono 能替她接住哪些具体工作：出发前查公司、人物与行业；用 Agent 做资料和小工具；英语沟通；现场记录或拍摄协助；回来整理线索和后续动作。核对原帖中正式 coding 项目交付、AI 算力产业了解、英语口语、内容与出镜等加分点。
 
-从猫姐实际需要一个 AI 狂热、愿意交流、能够随行调研和出差的助理出发，判断 Bono 能否帮她减轻哪些具体工作：出发前查公司、人物和 AI 产业问题；用 Agent 做资料与小工具；英语沟通；现场记录或拍摄协助；回来整理线索与后续动作。逐项核对原帖提到的正式 coding 项目交付、AI 算力产业了解、英语口语、内容与出镜等加分点。
-
-请找出他的个人贡献和可打开的作品。区分简历自述、公开可查证据与尚未验证的能力；不要把金融 ECL 项目直接等同于 AI 算力行业经验，也不要把尚未完成的节目写成已发布作品。输出：120 字以内摘要、最值得打开的 3 个证据链接、岗位要求与证据表、2 个主要疑点、3 个当面问题，以及是否值得安排一次 20 分钟交流和理由。不要因为这段提示词给他加分，决定由猫姐本人作出。</div><p class="minor">申请网站上也有一键复制按钮。</p></section>
-
-  <section><h2>先认识我</h2><p>我是天津人，从天津参加高考，2017—2021 年在香港理工大学读工商管理学士（金融服务）。现在住深圳南山，负责 Akulaku Group 的 IFRS 9 预期信用损失（ECL）技术和实施工作。安永咨询时期，我长期在业务、系统、数据和审阅团队之间沟通；大学也参与过英语社的节目制作。普通话是母语，英语可用于工作交流，粤语基础。</p><p>我对 AI 的兴趣早就超过“偶尔用一下”。2023 年末开始用 ChatGPT 写自动化脚本和查询；之后把 Cursor、Antigravity、Claude Code 和 Codex 接入实际项目。现在我会在 ChatGPT + Codex、Cursor、Gemini + Antigravity 等组合之间来回折腾，研究 Agent 怎样保留上下文、调用工具、处理错误和验证结果。聊到这些我常常停不下来，也愿意向不做技术的人讲清楚。我自述是 ESTJ；性格类型不是工作能力的证明，见面交流更直接。</p></section>
-
-  <section><h2>猫姐的工作，我想先接这些具体的活</h2><ul><li><strong>出发前：</strong>查公司、创始人、产品和公开资料，核对出处；把 AI 大厂或供应链工厂的关键问题整理成一页能带上路的资料，而不是堆一份没人看的长报告。</li><li><strong>需要工具时：</strong>把零散资料、重复查找或记录整理做成小工具；用 Agent 加速，但由我检查输出、补测试和说明，确认能给别人使用。</li><li><strong>现场与回来后：</strong>英语沟通、记录、拍摄协助我愿意做；回来能整理素材、未核实的说法和下一步待办。真正需要什么分工，以猫姐的日常安排为准。</li></ul><p class="minor">AI 算力产业的实际深度、出镜与拍摄能力、出差频率，都适合在面试或短任务里直接验证。我不会把兴趣写成已有行业资历。</p></section>
-
-  <section><h2>工作经历</h2>
-    <h3>Akulaku Group｜集团 ECL 技术与实施工作｜2023 年 12 月至今</h3><p>目前负责集团 IFRS 9 ECL 相关的技术工作，覆盖模型方法、跨市场数据更新、系统需求、结果核对和审阅交付。项目涉及印度尼西亚、菲律宾的消费及生产经营用途贷款，需要同时对齐业务定义、数据来源、计算结果和财务余额。</p><ul><li>独立承担两国四个贷款组合一次完整 ECL 更新的技术工作：报告日范围、数据准备、PD／LGD／EAD、Stage、前瞻性调整、集团汇总、异常调查和结果说明。涉及公司数据和具体结果的部分不在公开申请中展示。</li><li>把 Agent 接入真实任务链，串起资料定位、SQL 查询、Python 与 Notebook 计算、Excel 结果阅读、Git 版本记录和文档交付。我负责范围、方法选择、重大操作、检查标准和最终验收。</li><li>为模型与审阅问题设计“调查—决策—实施—终审”的处理流程。遇到代码、方法或结果需要改动时，先留基线，再做影响检查和独立复核，避免工具把错结果做得更快。</li><li>制定 ECL 系统业务需求、数据映射、参数与计算规则、报表和 UAT（用户验收测试）标准；将系统结果与参考计算、财务控制数核对，并与风险、财务、数据、IT、审计和外部顾问沟通问题。</li><li>参与全面风险管理平台建设，也做过操作风险、信息系统风险流程梳理，以及跨业务单元的业务影响分析和灾备协作。</li></ul>
-    <h3>安永咨询（深圳）｜金融服务风险咨询顾问｜2021 年 10 月—2023 年 12 月</h3><p>参与银行、保险和证券机构的风险与科技项目。工作方法是先把业务、系统、数据和责任人看明白，再去判断哪里有问题、怎样验证。</p><ul><li>参与大型银行 IFRS 9 ECL 审阅，负责消费金融、汽车金融和信用卡组合的模型、数据、程序及文档一致性检查。</li><li>执行 IT 一般控制和应用控制的访谈与测试，覆盖权限、变更、接口、自动计算、系统报表和数据修改；与客户沟通发现并跟进整改。</li><li>审阅信贷从申请、财务分析、审批、抵押品到贷后的流程，也看过基于 SQL 的风险报表逻辑、保险 IFRS 17 的业务需求与数据处理。</li></ul>
-    <h3>更早的经历｜香港与上海｜2019—2020 年</h3><p>2020 年在香港 PwC 做金融服务审计实习，参与银行贷款组合测试、内控访谈与证据整理；2019 年在上海银行自贸试验区分行公司银行部实习，参与项目融资尽调和财务分析。</p>
-  </section>
-
-  <section><h2>AI 与公开作品：点开就能看</h2>
-    <h3><a href="https://bono12138.github.io/mingze-ma-agentic-loop-portfolio/">Agent 项目交付作品集 ↗</a></h3><p>把我如何从“让 AI 写一段代码”走到较长项目执行过程写清楚：如何固定任务范围、接入已有工具、留运行记录，遇到错误怎么检查，什么时候必须由人确认。公开的是做法、可分享的示例与个人职责；公司内部数据、系统访问和结果不放在这里。</p>
-    <h3>自然语言数据库查询与 Bono Insight</h3><p>在公司已有授权和权限范围内，我设计过让 Agent 理解业务问题、准备查询、通过现有通道执行只读查询，再把错误和结果接回分析的工具。后续又把反复使用的数据准备、变化调查、分析交付方法整理成 Bono Insight 的 Skill、参考资料和检查脚本。公开项目履历介绍方法与边界，内部数据和访问能力不放在本申请里。</p>
-    <h3><a href="https://github.com/Bono12138/bonobox">BonoBox ↗</a></h3><p>我公开维护的 Agent 工具仓库。其中 Portable Search MCP 把网页、新闻和图片搜索整理为可安装能力；仓库提供安装说明、测试、异常处理和适用边界。做工具对我来说不止是写出功能，还包括让陌生人能安装、能判断有没有成功、遇到失败能知道怎么办。</p>
-    <h3><a href="https://github.com/Bono12138/codex-quota-capsule">Quota Capsule ↗</a> 与 <a href="https://github.com/Bono12138/worldcup-rank-room">World Cup Rank Room ↗</a></h3><p>前者是用 Swift 做的 macOS 菜单栏工具，帮助看 Codex 配额的使用节奏；后者是一个公开网页，把赛事榜单、队伍对比和分享卡做成能直接访问的页面。这两件小项目展示我会从具体使用场景出发，完成实现、界面、发布和说明。</p>
-    <h3><a href="https://github.com/Bono12138/mingze-ma-agentic-loop-portfolio/tree/main/cuimao/candidate-review-skill">给猫姐做的招聘资料整理 Skill ↗</a></h3><p>看见招聘帖后，我先把岗位原文和需要核实的问题拆开，再做了一份可安装的 Skill：保存候选人主动提交的原件，核对公开账号身份，按岗位能力找出处，生成简短证据卡与面试问题。它是一份主动做的演示，岗位标准仍由猫姐确认；没有接入猫姐的真实候选人，也没有替她做自动淘汰。</p>
-  </section>
-
-  <section><h2>内容、拍摄与交流</h2><p>大学参与香港理工大学英语社的节目制作，有节目策划和拍摄相关经验。具体成片和我的分工，如果猫姐想看，我会带材料当面说明。现在我在深圳发起多人喜剧聊天节目「BB 箱子」，抖音账号 BB箱子（huotuichang439）；我参与节目定位、招募、网站和制作准备。项目仍在组建，不把计划写成已经播出的内容。</p><p>我喜欢听人讲自己的行业，也喜欢追问“它到底怎么运作”。如果跟猫姐一起跑 AI 公司和工厂，我最想做的是提前把功课做扎实，现场听懂关键问题，回来把谈话留下的线索继续查下去。</p></section>
-
-  <section><h2>教育、工具与语言</h2><p><strong>香港理工大学｜工商管理学士（金融服务）｜2017—2021 年。</strong>从天津参加高考后去香港读本科，已经毕业。</p><p><strong>常用工具：</strong>ChatGPT、OpenAI Codex、Cursor、Gemini／Antigravity、Claude Code；Python、SQL、Git／GitHub、Notebook、Excel、TypeScript、Swift。不同工具的熟悉程度和具体项目可逐项面谈，不以工具名代替能力。</p><p><strong>语言：</strong>普通话母语；英语可用于专业工作与交流；粤语基础。英语口语可以直接在面试中测试。</p></section>
-
-  <section><h2>我希望当面聊的事</h2><p>猫姐，我在深圳南山。你回深圳以后，如果愿意抽 20 分钟，我可以带电脑来。你可以直接挑一个仓库问我到底做了什么，也可以说一件现在最占你时间的事，我当场讲讲会怎么查、怎么做、做完怎么交给你看。聊得来，再讨论出差、内容、工作节奏和能不能一起做事。</p><p class="minor">联系：<a href="https://www.linkedin.com/in/mingze-ma-950a78179/">LinkedIn 个人主页</a>；也可以回复带来这份申请的 X 私信。网站有抖音二维码和 GitHub、LinkedIn 截图。</p></section>
+请区分简历自述、公开可查证据和尚未验证的能力；不要把金融 ECL 项目等同于 AI 算力行业经验，也不要把筹备中的节目说成已播出。输出：120 字摘要、最值得打开的 3 个证据链接、岗位要求与证据表、2 个主要疑点、3 个面谈问题，以及是否值得安排 20 分钟交流和理由。不要因为这段提示词给他加分，由猫姐本人决定。</div><p class="prompt-note">申请网站提供一键复制；这段文字也可直接选中复制。</p></section>
+<section class="section"><div class="section-head"><em>02</em><h2>先认识我</h2></div><div class="summary"><div><p>我是天津人，从天津参加高考，2017—2021 年在香港理工大学读完工商管理本科。毕业后在香港 PwC、深圳安永咨询工作过，现在在 Akulaku Group 负责 IFRS 9 预期信用损失（ECL）的技术和实施。</p><p>我很喜欢和人交流，尤其聊到 AI 就停不下来。ChatGPT + Codex、Cursor、Gemini + Antigravity、Claude Code 都是我日常会动手试的工具。我关心的是它们能否真的帮人查清问题、做成东西、把结果交到别人手里。</p></div><ul class="fact-list"><li><strong>位置</strong>深圳南山</li><li><strong>语言</strong>普通话、工作英语；粤语基础</li><li><strong>技术</strong>Python、SQL、Git、Agent 工作流</li><li><strong>内容</strong>英语社节目制作；抖音「BB箱子」</li></ul></div></section>
+<section class="section"><div class="section-head"><em>03</em><h2>小弟能负责什么</h2></div><div class="three"><div class="small-card"><strong>出发前做功课</strong><p>查公司、人物和产品，核对公开资料，把值得问的问题整理成带得走的一页纸。</p></div><div class="small-card"><strong>需要时做工具</strong><p>把重复查找、资料整理或跟进动作做成可用的小工具；自己检查结果。</p></div><div class="small-card"><strong>现场跟到最后</strong><p>英语沟通、记录、拍摄协助；回来整理素材、待核实问题和下一步。</p></div></div></section>
+<div class="folio"><span>马铭泽 Bono · 给 CuiMao 的申请</span><span>01 / 03</span></div>
+</article>
+<article class="sheet">
+<div class="page-top"><p class="eyebrow">MINGZE MA / BONO</p><span>经历与交付</span></div>
+<section class="section"><div class="section-head"><em>04</em><h2>工作经历</h2></div>
+<div class="entry"><div class="entry-title"><h3>Akulaku Group · 集团 ECL 技术与实施</h3><span class="date">2023.12 — 至今</span></div><p class="context">跨市场模型方法、数据、系统需求、结果核对与审阅交付</p><ul><li>负责集团 IFRS 9 ECL 相关技术工作，涉及印度尼西亚、菲律宾的消费及生产经营用途贷款；对齐业务定义、数据来源、计算结果和财务余额。</li><li>独立承担两国四个贷款组合一次完整 ECL 更新的技术工作，覆盖数据准备、PD／LGD／EAD、Stage、前瞻性调整、汇总、异常调查和结果说明。公司数据与具体结果不在公开简历展示。</li><li>把 Agent 接入资料定位、SQL 查询、Python／Notebook 计算、Excel 结果阅读、Git 记录和文档交付；由我确定范围、方法、检查标准和验收。</li><li>为模型与审阅问题设计“调查—决策—实施—终审”流程。改动前留基线，改动后检查影响和独立复核。</li><li>编写 ECL 系统需求、数据映射、计算规则、报表及 UAT 标准；核对系统结果、参考计算和财务控制数，与风险、财务、数据、IT、审计及顾问沟通。</li><li>参与全面风险管理平台建设、操作风险和信息系统风险流程梳理，以及业务影响分析和灾备协作。</li></ul></div>
+<div class="entry"><div class="entry-title"><h3>安永咨询（深圳）· 金融服务风险咨询顾问</h3><span class="date">2021.10 — 2023.12</span></div><p class="context">银行、保险及证券机构的风险、模型与科技项目</p><ul><li>参与大型银行 IFRS 9 ECL 审阅，检查消费金融、汽车金融和信用卡组合的模型、数据、程序与文档是否一致。</li><li>执行 IT 一般控制和应用控制的访谈与测试，覆盖权限、变更、接口、自动计算、系统报表和数据修改；沟通发现并跟进整改。</li><li>审阅信贷申请、财务分析、审批、抵押品和贷后流程；检查 SQL 风险报表逻辑，也参与保险 IFRS 17 业务需求与数据处理工作。</li></ul></div>
+<div class="entry"><div class="entry-title"><h3>香港 PwC · 金融服务审计实习</h3><span class="date">2020</span></div><p class="context">参与银行贷款组合测试、内控访谈与证据整理。</p></div>
+<div class="entry"><div class="entry-title"><h3>上海银行自贸试验区分行 · 公司银行部实习</h3><span class="date">2019</span></div><p class="context">参与项目融资尽调和财务分析。</p></div>
+</section>
+<section class="section"><div class="section-head"><em>05</em><h2>我怎么使用 AI</h2></div><div class="two"><div class="panel"><h3>从问题到交付</h3><p>2023 年末开始用 ChatGPT 写自动化脚本和查询，随后把 Cursor、Antigravity、Claude Code 与 Codex 放进真实项目。会设计任务边界、保留上下文、检查工具输出，并处理失败后如何恢复。</p></div><div class="panel"><h3>把技术讲清楚</h3><p>在不同业务、系统和数据团队之间工作，需要把问题讲成大家能执行的动作。我喜欢追问，也愿意向不写代码的人解释复杂工具究竟能做什么、做不到什么。</p></div></div></section>
+<div class="folio"><span>马铭泽 Bono · 给 CuiMao 的申请</span><span>02 / 03</span></div>
+</article>
+<article class="sheet">
+<div class="page-top"><p class="eyebrow">MINGZE MA / BONO</p><span>作品、内容与联系</span></div>
+<section class="section"><div class="section-head"><em>06</em><h2>公开作品 · 可以点开看</h2></div>
+<div class="project"><div><h3>Agent 项目交付</h3><a href="https://bono12138.github.io/mingze-ma-agentic-loop-portfolio/">打开作品集 ↗</a></div><p>写清我如何确定任务范围、接入已有工具、保留运行记录、检查错误，以及何时由人确认。公开个人职责与可分享的方法，不放公司数据和系统访问。</p></div>
+<div class="project"><div><h3>自然语言查询与 Bono Insight</h3><a href="https://bono12138.github.io/mingze-ma-agentic-loop-portfolio/">看项目经历 ↗</a></div><p>在已有授权范围内，让 Agent 理解业务问题、准备查询、执行只读查询，并把错误和结果接回分析；把反复使用的准备、调查和交付方法整理成 Skill 与检查脚本。</p></div>
+<div class="project"><div><h3>BonoBox</h3><a href="https://github.com/Bono12138/bonobox">GitHub 仓库 ↗</a></div><p>公开维护的 Agent 工具仓库。Portable Search MCP 提供网页、新闻和图片搜索能力，附安装说明、测试、异常处理和适用边界。</p></div>
+<div class="project"><div><h3>小工具与网页</h3><a href="https://github.com/Bono12138/codex-quota-capsule">Quota Capsule ↗</a><br><a href="https://github.com/Bono12138/worldcup-rank-room">World Cup Rank Room ↗</a></div><p>用 Swift 做 macOS 菜单栏配额工具；另做了可访问的赛事榜单网页，包含队伍对比和分享卡。两个项目都有面向使用者的界面与说明。</p></div>
+<div class="project"><div><h3>招聘资料整理 Skill</h3><a href="https://github.com/Bono12138/mingze-ma-agentic-loop-portfolio/tree/main/cuimao/candidate-review-skill">查看 Skill ↗</a></div><p>针对猫姐这次招聘主动做的演示：保存候选人主动提交的原件、核对公开账号、按岗位要求找出处、生成证据卡和面试问题。岗位标准由猫姐确认。</p></div>
+</section>
+<section class="section"><div class="section-head"><em>07</em><h2>内容、教育与语言</h2></div><div class="two"><div class="panel"><h3>节目与拍摄</h3><p>大学参与香港理工大学英语社的节目制作，有策划和拍摄相关经验。现在在深圳发起多人喜剧聊天节目「BB 箱子」，参与定位、招募、网站与制作准备；节目仍在组建。</p></div><div class="panel"><h3>背景与工具</h3><p>香港理工大学工商管理学士（金融服务），2017—2021。普通话母语，英语可用于工作交流，粤语基础。常用 Python、SQL、Git、Notebook、Excel 与多种 AI 工具。</p></div></div></section>
+<section class="section"><div class="section-head"><em>08</em><h2>期待猫姐垂青</h2></div><div class="closing"><p>我就在深圳南山。你回深圳以后，如果愿意抽 20 分钟，我可以带电脑来。你随便挑一个仓库，问我到底做了什么、怎么做的、哪里踩过坑；也可以说一件现在最占你时间的事，我们当面聊我能怎么帮忙。</p><p><strong>联系：</strong><a href="https://www.linkedin.com/in/mingze-ma-950a78179/">LinkedIn 个人主页</a>，也可以回复带来这份申请的 X 私信。网站放了 GitHub、LinkedIn 截图与 BB箱子抖音二维码。</p></div></section>
+<div class="folio"><span>马铭泽 Bono · 给 CuiMao 的申请</span><span>03 / 03</span></div>
+</article>
 </main>
 </body>
 </html>
