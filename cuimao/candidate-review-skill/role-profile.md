@@ -17,3 +17,16 @@ Source: [CuiMao's public recruitment post](https://x.com/CuiMao/status/210235286
 5. What are the work arrangements and decision-maker for review, interview, and offer?
 
 Until the recruiter answers, use the stated items as discussion topics, not fixed weights. Do not manufacture a total score or reverse-engineer criteria around any applicant.
+
+## Draft competencies to confirm before a batch
+
+| Proposed competency | Evidence to look for | What the public post does not settle |
+|---|---|---|
+| Practical AI use | A concrete task, tool choice, output, and checks | Whether daily AI use alone is enough |
+| Shipping technical work | A delivered coding project with personal contribution and users or tests | Whether this is essential or a pay-related plus |
+| Research and AI compute | A sourced briefing or discussion of a company, product, or compute topic | Required depth and which subsectors matter |
+| English communication | A short live discussion about the actual work | Required frequency and level |
+| Travel and field coordination | Examples of preparation, follow-up, logistics, and availability | Schedule, notice period, and location arrangement |
+| Content and collaboration | Published work or a specific production contribution | Split between assistant and AI content director roles |
+
+This is a proposal for CuiMao to edit, not a scorecard. Freeze the confirmed version for each review run. Do not use birthplace, school prestige, personality type, appearance, or follower count as substitutes for these work examples.
