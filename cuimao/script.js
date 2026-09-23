@@ -14,6 +14,6 @@ async function copyPrompt(button) {
   }
   window.setTimeout(() => { button.innerHTML = original; }, 3500);
 }
-for (const id of ['copy-prompt', 'copy-prompt-bottom']) {
+for (const id of ['copy-prompt-bottom']) {
   document.getElementById(id)?.addEventListener('click', event => copyPrompt(event.currentTarget));
 }
